@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Dashboard | Agdangan Tourism</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AGDANGAN <span>TOURISM</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="shop.html">Marketplace</a></li>
+                <li><a href="dashboard.html">Partner Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <h3 style="margin-bottom: 1.5rem;">Partner Management</h3>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active" onclick="switchTab('bookings', this)">Reservations</a></li>
+                <li><a href="#" onclick="switchTab('inventory', this)">Inventory</a></li>
+                <li><a href="#" onclick="switchTab('schedules', this)">Tour Schedules</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <!-- Bookings Tab -->
+            <div id="bookings" class="tab-content active">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2>Active Reservations</h2>
+                    <span class="tag tag-blue">Real-time Data</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer</th>
+                            <th>Item</th>
+                            <th>Date</th>
+                            <th>Guests</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookings-table-body">
+                        <!-- Bookings will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Inventory Tab -->
+            <div id="inventory" class="tab-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2>Product Inventory</h2>
+                    <button class="btn btn-primary" onclick="alert('Feature coming soon: Add New Product')">+ Add New</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Stock Level</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-table-body">
+                        <!-- Inventory will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Schedules Tab -->
+            <div id="schedules" class="tab-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2>Tour Guide Schedules</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Assigned Guide</th>
+                            <th>Availability</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedules-table-body">
+                        <!-- Schedules will be loaded here -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        function switchTab(tabId, el) {
+            // Update menu
+            document.querySelectorAll('.sidebar-menu a').forEach(a => a.classList.remove('active'));
+            el.classList.add('active');
+
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load Bookings
+            const bookings = getData('agd_bookings');
+            const bookingsBody = document.getElementById('bookings-table-body');
+            if (bookings.length === 0) {
+                bookingsBody.innerHTML = '<tr><td colspan="7" style="text-align: center;">No reservations yet. Try booking something!</td></tr>';
+            } else {
+                bookings.forEach(b => {
+                    const row = `<tr>
+                        <td>#${b.id.toString().slice(-4)}</td>
+                        <td>${b.customer}</td>
+                        <td>${b.item}</td>
+                        <td>${b.date}</td>
+                        <td>${b.guests}</td>
+                        <td><span class="tag tag-green">${b.status}</span></td>
+                        <td><button onclick="alert('Booking updated')" style="padding: 0.3rem 0.5rem; font-size: 0.8rem; cursor: pointer;">Edit</button></td>
+                    </tr>`;
+                    bookingsBody.insertAdjacentHTML('beforeend', row);
+                });
+            }
+
+            // Load Inventory
+            const products = getData('agd_products');
+            const inventoryBody = document.getElementById('inventory-table-body');
+            products.forEach(p => {
+                const row = `<tr>
+                    <td>${p.name}</td>
+                    <td>₱${p.price}</td>
+                    <td style="color: ${p.stock < 10 ? 'red' : 'inherit'}; font-weight: ${p.stock < 10 ? 'bold' : 'normal'};">${p.stock}</td>
+                    <td>${p.stock > 0 ? 'In Stock' : 'Out of Stock'}</td>
+                    <td><button onclick="alert('Update price/stock')" style="padding: 0.3rem 0.5rem; font-size: 0.8rem; cursor: pointer;">Manage</button></td>
+                </tr>`;
+                inventoryBody.insertAdjacentHTML('beforeend', row);
+            });
+
+            // Load Schedules
+            const tours = getData('agd_tours');
+            const schedulesBody = document.getElementById('schedules-table-body');
+            tours.forEach(t => {
+                const row = `<tr>
+                    <td>${t.name}</td>
+                    <td>${t.guide}</td>
+                    <td>${t.availability}</td>
+                    <td><span class="tag tag-blue">Active</span></td>
+                </tr>`;
+                schedulesBody.insertAdjacentHTML('beforeend', row);
+            });
+        });
+    </script>
+</body>
+</html>

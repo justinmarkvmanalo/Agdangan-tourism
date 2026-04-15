@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace | Agdangan Tourism</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AGDANGAN <span>TOURISM</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="shop.html">Marketplace</a></li>
+                <li><a href="dashboard.html">Partner Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; border-bottom: 2px solid var(--azure-blue); padding-bottom: 0.5rem;">
+            <h2>Agdangan Local Products</h2>
+            <p>Supporting local coconut farmers and artisans.</p>
+        </div>
+
+        <div id="product-grid" class="grid">
+            <!-- Products will be loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agdangan Tourism Development Office. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = getData('agd_products');
+            const grid = document.getElementById('product-grid');
+            
+            products.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img" style="background-color: #e8f5e9; color: var(--emerald-dark);">COCO-ITEM</div>
+                    <div class="card-content">
+                        <h3>${p.name}</h3>
+                        <p>Authentic Agdangan Quality</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                            <span style="font-weight: bold; font-size: 1.2rem; color: var(--azure-dark);">₱${p.price}</span>
+                            <span style="font-size: 0.9rem; color: ${p.stock < 10 ? 'red' : '#666'};">Stock: ${p.stock}</span>
+                        </div>
+                        <button onclick="submitOrder(${p.id}, '${p.name}')" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;" ${p.stock === 0 ? 'disabled' : ''}>
+                            ${p.stock === 0 ? 'Out of Stock' : 'Order Now'}
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Agdangan Tourism</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AGDANGAN <span>TOURISM</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="shop.html">Marketplace</a></li>
+                <li><a href="dashboard.html">Partner Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 style="margin-bottom: 2rem; border-bottom: 2px solid var(--emerald-green); padding-bottom: 0.5rem;">Plan Your Adventure</h2>
+        
+        <div class="booking-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+            <!-- Left Side: Listings -->
+            <div class="listings">
+                <h3>Featured Eco-Resorts & Activities</h3>
+                <div id="resort-list" class="grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
+                    <!-- Dynamically Loaded by app.js in a full app, but hardcoded for this demo -->
+                    <div class="card" style="display: flex;">
+                        <div class="card-img" style="width: 200px; height: auto; background-color: var(--emerald-light);">RESORT</div>
+                        <div class="card-content" style="flex: 1;">
+                            <span class="tag tag-green">Eco-Resort</span>
+                            <h3>Emerald Cove Eco-Resort</h3>
+                            <p>Coastal serenity with sustainable luxury.</p>
+                            <p><strong>₱2,500 / Night</strong></p>
+                        </div>
+                    </div>
+                    <div class="card" style="display: flex;">
+                        <div class="card-img" style="width: 200px; height: auto; background-color: var(--azure-light);">TOUR</div>
+                        <div class="card-content" style="flex: 1;">
+                            <span class="tag tag-blue">Activity</span>
+                            <h3>Mangrove Boat Tour</h3>
+                            <p>Explore Agdangan's diverse mangrove ecosystem.</p>
+                            <p><strong>₱500 / Person</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="booking-form-container" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); height: fit-content;">
+                <h3>Reservation Form</h3>
+                <form id="booking-form" onsubmit="submitBooking(event)">
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Select Resort/Activity</label>
+                        <select name="itemName" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                            <option value="Emerald Cove Eco-Resort">Emerald Cove Eco-Resort</option>
+                            <option value="Mangrove Boat Tour">Mangrove Boat Tour</option>
+                            <option value="Green Valley Farm Stay">Green Valley Farm Stay</option>
+                            <option value="Mt. Agdangan Hiking">Mt. Agdangan Hiking</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Full Name</label>
+                        <input type="text" name="customerName" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Date</label>
+                        <input type="date" name="date" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Number of Guests</label>
+                        <input type="number" name="guests" min="1" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 5px;">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agdangan Tourism Development Office. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
