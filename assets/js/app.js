@@ -81,3 +81,33 @@ function submitOrder(productId, productName) {
     alert(`Order for ${productName} confirmed!`);
     location.reload(); // Refresh to show new stock level
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tiltCards = document.querySelectorAll('[data-tilt-card]');
+
+    tiltCards.forEach(card => {
+        const panel = card.querySelector('.map-panel');
+        const iframe = card.querySelector('iframe');
+        if (!panel) return;
+
+        card.addEventListener('mousemove', event => {
+            if (window.innerWidth <= 768) return;
+
+            const rect = card.getBoundingClientRect();
+            const x = (event.clientX - rect.left) / rect.width;
+            const y = (event.clientY - rect.top) / rect.height;
+            const rotateY = (x - 0.5) * 12;
+            const rotateX = 18 - y * 10;
+
+            panel.style.transform = `rotateX(${rotateX}deg) rotateZ(-8deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+
+        card.addEventListener('mouseenter', () => {
+            if (iframe && window.innerWidth > 768) iframe.style.pointerEvents = 'none';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            panel.style.transform = '';
+        });
+    });
+});
