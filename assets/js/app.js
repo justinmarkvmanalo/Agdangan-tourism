@@ -149,20 +149,55 @@ function initAgdanganMap() {
     };
 
     const resorts = {
-        'emerald-cove': {
-            title: 'Emerald Cove Eco-Resort',
-            description: 'A highlighted coastal eco-resort for ocean views, overnight stays, and easy access to shoreline activities.',
-            coords: [13.8789, 121.9226]
+        'acesor-beach': {
+            title: 'Acesor Beach Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8789, 121.9287]
         },
-        'green-valley': {
-            title: 'Green Valley Farm Stay',
-            description: 'An inland farm-stay destination focused on local food, green open space, and agri-tourism experiences.',
-            coords: [13.8755, 121.9078]
+        'christal-beach': {
+            title: 'Christal Beach Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8781, 121.9268]
         },
-        'azure-beach': {
-            title: 'Azure Beach Cottages',
-            description: 'A beachfront cottage cluster positioned along the coastal side of Agdangan for relaxed seaside stays.',
-            coords: [13.8771, 121.9264]
+        'javierama-beach': {
+            title: 'Javierama Beach Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8773, 121.9254]
+        },
+        'joerich-beach': {
+            title: 'Joerich Beach Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8766, 121.9242]
+        },
+        'la-cereza': {
+            title: 'La Cereza Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8796, 121.9232]
+        },
+        'montecarlo-beach': {
+            title: 'Montecarlo Beach Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8759, 121.9227]
+        },
+        'playa-de-nubla': {
+            title: 'Playa de Nubla Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8802, 121.9218]
+        },
+        'pobeda-beach': {
+            title: 'Pobeda Beach Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8778, 121.9208]
+        },
+        'salvatierra-beach': {
+            title: 'Salvatierra Beach Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
+            coords: [13.8768, 121.9198]
+        },
+        'yellow-house': {
+            title: 'The Yellow House Resort',
+            description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate near the town approach and resort corridor.',
+            coords: [13.8812, 121.9166]
         }
     };
 
@@ -258,5 +293,5 @@ function initAgdanganMap() {
         });
     });
 
-    focusArea('municipal-center');
+    focusResort('acesor-beach');
 }

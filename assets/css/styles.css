@@ -628,6 +628,9 @@ nav ul li a:hover::after {
     display: grid;
     gap: 0.85rem;
     margin-top: 1.75rem;
+    max-height: 29rem;
+    overflow-y: auto;
+    padding-right: 0.35rem;
 }
 
 .map-resort-list h3 {
@@ -670,6 +673,15 @@ nav ul li a:hover::after {
     color: var(--text-muted);
     font-size: 0.84rem;
     margin-top: 0.18rem;
+}
+
+.map-resort-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.map-resort-list::-webkit-scrollbar-thumb {
+    background: rgba(2, 119, 189, 0.35);
+    border-radius: 999px;
 }
 
 .map-scene {
