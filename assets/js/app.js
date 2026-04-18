@@ -83,31 +83,111 @@ function submitOrder(productId, productName) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const tiltCards = document.querySelectorAll('[data-tilt-card]');
+    initAgdanganMap();
+});
 
-    tiltCards.forEach(card => {
-        const panel = card.querySelector('.map-panel');
-        const iframe = card.querySelector('iframe');
-        if (!panel) return;
+function initAgdanganMap() {
+    const mapElement = document.getElementById('agdangan-map');
+    if (!mapElement || typeof L === 'undefined') return;
 
-        card.addEventListener('mousemove', event => {
-            if (window.innerWidth <= 768) return;
+    const infoCard = document.getElementById('map-info-card');
+    const zoneButtons = document.querySelectorAll('[data-map-focus]');
+    const markerIcon = L.divIcon({
+        className: '',
+        html: '<div class="custom-map-marker"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9]
+    });
 
-            const rect = card.getBoundingClientRect();
-            const x = (event.clientX - rect.left) / rect.width;
-            const y = (event.clientY - rect.top) / rect.height;
-            const rotateY = (x - 0.5) * 12;
-            const rotateX = 18 - y * 10;
+    const map = L.map(mapElement, {
+        zoomControl: true,
+        scrollWheelZoom: true,
+        tap: true
+    }).setView([13.8785, 121.9155], 14);
 
-            panel.style.transform = `rotateX(${rotateX}deg) rotateZ(-8deg) rotateY(${rotateY}deg) translateY(-10px)`;
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const areas = {
+        'municipal-center': {
+            title: 'Municipal Center',
+            description: 'The town proper and nearby service area where visitors can orient themselves before heading to resorts and local stops.',
+            bounds: [[13.8758, 121.9108], [13.8818, 121.9198]],
+            marker: [13.8788, 121.9151],
+            color: '#0f9d58'
+        },
+        'coastal-belt': {
+            title: 'Coastal Belt',
+            description: 'A visitor-facing shoreline zone for beach access, scenic stops, and blue-water tourism activity.',
+            bounds: [[13.8732, 121.9188], [13.8838, 121.9308]],
+            marker: [13.8782, 121.9248],
+            color: '#0288d1'
+        },
+        'farm-zone': {
+            title: 'Farm Zone',
+            description: 'An inland green belt suited to eco-farm visits, local produce stops, and agri-tourism storytelling.',
+            bounds: [[13.8708, 121.9018], [13.8818, 121.9132]],
+            marker: [13.8753, 121.9075],
+            color: '#7cb342'
+        },
+        'gateway-route': {
+            title: 'Gateway Route',
+            description: 'The main approach corridor used to enter Agdangan and connect visitors to the center and coast.',
+            bounds: [[13.8822, 121.9062], [13.8908, 121.9192]],
+            marker: [13.887, 121.9123],
+            color: '#fb8c00'
+        }
+    };
+
+    const activeLayers = {};
+
+    Object.entries(areas).forEach(([key, area]) => {
+        const rectangle = L.rectangle(area.bounds, {
+            color: area.color,
+            weight: 2,
+            fillColor: area.color,
+            fillOpacity: 0.18
+        }).addTo(map);
+
+        const marker = L.marker(area.marker, { icon: markerIcon })
+            .addTo(map)
+            .bindPopup(
+                `<div class="tourism-popup-card"><strong>${area.title}</strong><span>${area.description}</span></div>`,
+                { className: 'tourism-popup' }
+            );
+
+        rectangle.on('click', () => focusArea(key));
+        marker.on('click', () => focusArea(key));
+        activeLayers[key] = { rectangle, marker };
+    });
+
+    function focusArea(key) {
+        const area = areas[key];
+        if (!area) return;
+
+        map.fitBounds(area.bounds, {
+            padding: [32, 32],
+            maxZoom: 16
         });
 
-        card.addEventListener('mouseenter', () => {
-            if (iframe && window.innerWidth > 768) iframe.style.pointerEvents = 'none';
+        if (infoCard) {
+            infoCard.innerHTML = `<h3>${area.title}</h3><p>${area.description}</p>`;
+        }
+
+        zoneButtons.forEach(button => {
+            button.classList.toggle('active', button.dataset.mapFocus === key);
         });
 
-        card.addEventListener('mouseleave', () => {
-            panel.style.transform = '';
+        activeLayers[key].marker.openPopup();
+    }
+
+    zoneButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            focusArea(button.dataset.mapFocus);
         });
     });
-});
+
+    focusArea('municipal-center');
+}

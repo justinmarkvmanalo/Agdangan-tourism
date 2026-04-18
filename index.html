@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agdangan Tourism | Eco-Resort & Activity Booking</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -79,39 +84,34 @@
         <div class="container">
             <div class="map-copy">
                 <span class="eyebrow">3D Map View</span>
-                <h2>Fly Over Agdangan Before You Arrive</h2>
-                <p>A satellite-style map of Agdangan, Quezon presented in a tilted 3D frame so visitors can quickly understand the town's coastal setting, inland routes, and nearby tourism zones.</p>
+                <h2>Explore Agdangan Area by Area</h2>
+                <p>Pinch to zoom, drag around town, or tap a zone below to jump to key parts of Agdangan. The frame keeps a 3D presentation, while the map itself stays fully interactive on touch screens.</p>
                 <div class="map-pills">
-                    <span class="map-pill">Coastal access</span>
-                    <span class="map-pill">Town center</span>
-                    <span class="map-pill">Trip planning</span>
+                    <span class="map-pill">Pinch zoom</span>
+                    <span class="map-pill">Tap hotspots</span>
+                    <span class="map-pill">Area focus</span>
+                </div>
+                <div class="map-zone-list">
+                    <button class="map-zone active" type="button" data-map-focus="municipal-center">Municipal Center</button>
+                    <button class="map-zone" type="button" data-map-focus="coastal-belt">Coastal Belt</button>
+                    <button class="map-zone" type="button" data-map-focus="farm-zone">Farm Zone</button>
+                    <button class="map-zone" type="button" data-map-focus="gateway-route">Gateway Route</button>
                 </div>
             </div>
 
-            <div class="map-scene" data-tilt-card>
+            <div class="map-scene">
                 <div class="map-glow"></div>
                 <div class="map-panel">
-                    <iframe
-                        title="Agdangan 3D map"
-                        src="https://maps.google.com/maps?q=Agdangan%20Quezon%20Philippines&t=k&z=14&ie=UTF8&iwloc=&output=embed"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
                     <div class="map-overlay">
                         <div class="map-badge">Agdangan, Quezon</div>
-                        <div class="map-marker marker-coast">
-                            <span></span>
-                            <strong>Coastline</strong>
-                        </div>
-                        <div class="map-marker marker-center">
-                            <span></span>
-                            <strong>Town Proper</strong>
-                        </div>
-                        <div class="map-marker marker-route">
-                            <span></span>
-                            <strong>Access Road</strong>
-                        </div>
+                        <div class="map-status">Interactive map enabled</div>
                     </div>
+                    <div id="agdangan-map" class="map-canvas" aria-label="Interactive map of Agdangan"></div>
+                </div>
+                <div class="map-ledge" aria-hidden="true"></div>
+                <div class="map-info-card" id="map-info-card">
+                    <h3>Municipal Center</h3>
+                    <p>Start here to orient visitors around the town proper and nearby service points.</p>
                 </div>
                 <div class="map-shadow"></div>
             </div>
@@ -143,6 +143,11 @@
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="">
+    </script>
     <script>
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
