@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agdangan Tourism | Eco-Resort & Activity Booking</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <header>
@@ -21,51 +23,92 @@
         </nav>
     </header>
 
-    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80') center/cover; height: 70vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
+    <section class="hero">
         <div class="hero-content">
-            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Experience the "Green & Blue"</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Discover Agdangan's lush eco-farms and serene coastal landscapes. Book your next escape today.</p>
+            <h2>Experience the "Green & Blue"</h2>
+            <p>Discover Agdangan's lush eco-farms and serene coastal landscapes. Book your next escape today and immerse yourself in nature's finest offerings.</p>
             <div class="hero-btns">
-                <a href="booking.html" class="btn btn-primary" style="margin-right: 1rem;">Explore Resorts</a>
-                <a href="shop.html" class="btn btn-secondary">Shop Local Products</a>
+                <a href="booking.html" class="btn btn-primary">Explore Resorts</a>
+                <a href="shop.html" class="btn btn-outline">Shop Local Products</a>
             </div>
         </div>
     </section>
 
-    <main class="container">
-        <section class="featured">
-            <h2 style="text-align: center; margin-bottom: 2rem;">Why Agdangan?</h2>
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Agdangan?</h2>
+                <p>Where nature meets authentic Filipino hospitality. Experience the perfect blend of eco-tourism and coastal charm.</p>
+            </div>
             <div class="grid">
                 <div class="card">
-                    <div class="card-img" style="background-color: var(--emerald-light);">ECO-FARMS</div>
+                    <div class="card-img" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+                        <div class="card-img-icon">🌱</div>
+                    </div>
                     <div class="card-content">
+                        <span class="tag tag-green">Eco-Farms</span>
                         <h3>Sustainable Agri-Tourism</h3>
-                        <p>Experience local farming culture and taste the freshest organic products straight from the source.</p>
+                        <p>Experience local farming culture and taste the freshest organic products straight from the source. Our community farms await your visit.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-img" style="background-color: var(--azure-light);">COASTAL GEMS</div>
+                    <div class="card-img" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);">
+                        <div class="card-img-icon">🏝️</div>
+                    </div>
                     <div class="card-content">
+                        <span class="tag tag-blue">Coastal</span>
                         <h3>Pristine Shorelines</h3>
-                        <p>Relax on undisturbed beaches or enjoy boat tours around Agdangan's beautiful coastline.</p>
+                        <p>Relax on undisturbed beaches or enjoy boat tours around Agdangan's beautiful coastline. Crystal waters and golden sands await.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-img" style="background-color: var(--accent);">LOCAL GOODS</div>
+                    <div class="card-img" style="background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);">
+                        <div class="card-img-icon">🎁</div>
+                    </div>
                     <div class="card-content">
+                        <span class="tag tag-gold">Local Goods</span>
                         <h3>Authentic Crafts</h3>
-                        <p>Support the community by purchasing unique coconut-based products and handmade souvenirs.</p>
+                        <p>Support the community by purchasing unique coconut-based products and handmade souvenirs. Take a piece of Agdangan home.</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Agdangan Tourism Development Office. All Rights Reserved.</p>
-        <p style="margin-top: 1rem; font-size: 0.8rem; color: #888;">Integrated Eco-Resort & Activity Booking System Prototype</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Agdangan Tourism</h4>
+                <p>Promoting sustainable eco-tourism and supporting local communities through responsible travel experiences.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="booking.html" style="color: white; text-decoration: none;">Book a Stay</a></p>
+                <p><a href="shop.html" style="color: white; text-decoration: none;">Local Products</a></p>
+                <p><a href="dashboard.html" style="color: white; text-decoration: none;">Partner Portal</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Agdangan Tourism Development Office</p>
+                <p>Province of Quezon, Philippines</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Agdangan Tourism Development Office. All Rights Reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.5;">Integrated Eco-Resort & Activity Booking System</p>
+        </div>
     </footer>
 
     <script src="assets/js/app.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
