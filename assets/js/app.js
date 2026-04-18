@@ -157,12 +157,24 @@ function initAgdanganMap() {
         'christal-beach': {
             title: 'Christal Beach Resort',
             description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
-            coords: [13.8781, 121.9268]
+            coords: [13.8781, 121.9268],
+            photo: {
+                src: 'https://img.youtube.com/vi/H0m5YAlAMNA/hqdefault.jpg',
+                alt: 'Christal Beach Resort preview from public YouTube video',
+                caption: 'Preview image from a public YouTube video about Christal Beach Resort.',
+                href: 'https://www.youtube.com/watch?v=H0m5YAlAMNA'
+            }
         },
         'javierama-beach': {
             title: 'Javierama Beach Resort',
             description: 'Listed on the Municipality of Agdangan tourism page. Marker position is approximate within the Agdangan coastal resort strip.',
-            coords: [13.8773, 121.9254]
+            coords: [13.8773, 121.9254],
+            photo: {
+                src: 'https://img.youtube.com/vi/6AeobbigPLM/hqdefault.jpg',
+                alt: 'Javierama Beach Resort preview from public YouTube video',
+                caption: 'Preview image from a public YouTube video showing the Javierama resort approach and surrounding beach area.',
+                href: 'https://www.youtube.com/watch?v=6AeobbigPLM'
+            }
         },
         'joerich-beach': {
             title: 'Joerich Beach Resort',
@@ -245,9 +257,7 @@ function initAgdanganMap() {
             maxZoom: 16
         });
 
-        if (infoCard) {
-            infoCard.innerHTML = `<h3>${area.title}</h3><p>${area.description}</p>`;
-        }
+        renderInfoCard(area.title, area.description);
 
         zoneButtons.forEach(button => {
             button.classList.toggle('active', button.dataset.mapFocus === key);
@@ -266,9 +276,7 @@ function initAgdanganMap() {
 
         map.setView(resort.coords, 16, { animate: true });
 
-        if (infoCard) {
-            infoCard.innerHTML = `<h3>${resort.title}</h3><p>${resort.description}</p>`;
-        }
+        renderInfoCard(resort.title, resort.description, resort.photo);
 
         zoneButtons.forEach(button => {
             button.classList.remove('active');
@@ -294,4 +302,15 @@ function initAgdanganMap() {
     });
 
     focusResort('acesor-beach');
+
+    function renderInfoCard(title, description, photo) {
+        if (!infoCard) return;
+
+        const photoMarkup = photo
+            ? `<div class="map-photo-frame"><img src="${photo.src}" alt="${photo.alt}"></div>
+               <div class="map-photo-meta">${photo.caption} <a href="${photo.href}" target="_blank" rel="noopener noreferrer">Source</a></div>`
+            : `<div class="map-photo-placeholder">No verified public preview image is loaded for this resort yet.<br>Map marker and name are available now.</div>`;
+
+        infoCard.innerHTML = `${photoMarkup}<h3>${title}</h3><p>${description}</p>`;
+    }
 }
