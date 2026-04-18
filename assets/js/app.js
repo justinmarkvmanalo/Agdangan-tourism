@@ -92,9 +92,16 @@ function initAgdanganMap() {
 
     const infoCard = document.getElementById('map-info-card');
     const zoneButtons = document.querySelectorAll('[data-map-focus]');
+    const resortButtons = document.querySelectorAll('[data-map-resort]');
     const markerIcon = L.divIcon({
         className: '',
         html: '<div class="custom-map-marker"></div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9]
+    });
+    const resortIcon = L.divIcon({
+        className: '',
+        html: '<div class="custom-map-marker resort-marker"></div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9]
     });
@@ -141,7 +148,26 @@ function initAgdanganMap() {
         }
     };
 
+    const resorts = {
+        'emerald-cove': {
+            title: 'Emerald Cove Eco-Resort',
+            description: 'A highlighted coastal eco-resort for ocean views, overnight stays, and easy access to shoreline activities.',
+            coords: [13.8789, 121.9226]
+        },
+        'green-valley': {
+            title: 'Green Valley Farm Stay',
+            description: 'An inland farm-stay destination focused on local food, green open space, and agri-tourism experiences.',
+            coords: [13.8755, 121.9078]
+        },
+        'azure-beach': {
+            title: 'Azure Beach Cottages',
+            description: 'A beachfront cottage cluster positioned along the coastal side of Agdangan for relaxed seaside stays.',
+            coords: [13.8771, 121.9264]
+        }
+    };
+
     const activeLayers = {};
+    const resortLayers = {};
 
     Object.entries(areas).forEach(([key, area]) => {
         const rectangle = L.rectangle(area.bounds, {
@@ -163,6 +189,18 @@ function initAgdanganMap() {
         activeLayers[key] = { rectangle, marker };
     });
 
+    Object.entries(resorts).forEach(([key, resort]) => {
+        const marker = L.marker(resort.coords, { icon: resortIcon })
+            .addTo(map)
+            .bindPopup(
+                `<div class="tourism-popup-card"><strong>${resort.title}</strong><span>${resort.description}</span></div>`,
+                { className: 'tourism-popup' }
+            );
+
+        marker.on('click', () => focusResort(key));
+        resortLayers[key] = marker;
+    });
+
     function focusArea(key) {
         const area = areas[key];
         if (!area) return;
@@ -180,12 +218,43 @@ function initAgdanganMap() {
             button.classList.toggle('active', button.dataset.mapFocus === key);
         });
 
+        resortButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+
         activeLayers[key].marker.openPopup();
+    }
+
+    function focusResort(key) {
+        const resort = resorts[key];
+        if (!resort) return;
+
+        map.setView(resort.coords, 16, { animate: true });
+
+        if (infoCard) {
+            infoCard.innerHTML = `<h3>${resort.title}</h3><p>${resort.description}</p>`;
+        }
+
+        zoneButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        resortButtons.forEach(button => {
+            button.classList.toggle('active', button.dataset.mapResort === key);
+        });
+
+        resortLayers[key].openPopup();
     }
 
     zoneButtons.forEach(button => {
         button.addEventListener('click', () => {
             focusArea(button.dataset.mapFocus);
+        });
+    });
+
+    resortButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            focusResort(button.dataset.mapResort);
         });
     });
 

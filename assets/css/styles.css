@@ -624,6 +624,54 @@ nav ul li a:hover::after {
     outline: none;
 }
 
+.map-resort-list {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 1.75rem;
+}
+
+.map-resort-list h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.15rem;
+}
+
+.map-resort {
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
+    padding: 0.95rem 1.05rem;
+    font: inherit;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.map-resort:hover,
+.map-resort:focus-visible,
+.map-resort.active {
+    transform: translateX(6px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(46, 125, 50, 0.35);
+    outline: none;
+}
+
+.map-resort strong,
+.map-resort span {
+    display: block;
+}
+
+.map-resort strong {
+    color: var(--text-dark);
+    font-size: 0.96rem;
+}
+
+.map-resort span {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    margin-top: 0.18rem;
+}
+
 .map-scene {
     position: relative;
     min-height: 640px;
@@ -774,6 +822,11 @@ nav ul li a:hover::after {
     background: linear-gradient(135deg, #ff8a65, #ff7043);
     border: 3px solid rgba(255, 255, 255, 0.95);
     box-shadow: 0 0 0 10px rgba(255, 112, 67, 0.14);
+}
+
+.custom-map-marker.resort-marker {
+    background: linear-gradient(135deg, #26a69a, #00796b);
+    box-shadow: 0 0 0 10px rgba(0, 121, 107, 0.14);
 }
 
 .map-glow,
