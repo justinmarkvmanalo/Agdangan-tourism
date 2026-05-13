@@ -247,14 +247,15 @@ a {
 }
 
 .carousel-content {
-    width: min(1280px, calc(100% - 40px));
+    width: min(640px, calc(100% - 40px));
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0;
+    margin-left: clamp(28px, 4vw, 72px);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 110px 0 90px;
+    padding: 150px 0 76px;
     color: #ffffff;
 }
 
@@ -266,7 +267,7 @@ a {
     margin: 0;
     max-width: 10ch;
     font-family: 'Forum', serif;
-    font-size: clamp(2.2rem, 4.3vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3.75rem);
     line-height: 1.08;
 }
 
@@ -430,7 +431,7 @@ a {
 
 .explore-section {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 0.78fr 1.22fr;
     gap: 26px;
     padding: 28px;
     background:
@@ -457,13 +458,27 @@ a {
 
 .explore-panels {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
 }
 
 .explore-panel {
     padding: 28px;
     display: grid;
     gap: 0;
+    min-height: 260px;
+    box-shadow: var(--shadow);
+}
+
+.explore-panel__label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: inherit;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .explore-panel a {
@@ -491,6 +506,19 @@ a {
 
 .explore-panel--dark a {
     color: #f8e9bd;
+}
+
+.explore-panel--glass {
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.explore-panel--glass,
+.explore-panel--glass .explore-panel__label,
+.explore-panel--glass a {
+    color: #ffffff;
 }
 
 .section--whats {
@@ -979,8 +1007,9 @@ a {
     .carousel-content {
         max-width: 620px;
         height: 100%;
-        padding-top: 92px;
-        padding-bottom: 78px;
+        margin-left: 24px;
+        padding-top: 132px;
+        padding-bottom: 70px;
     }
 
     .carousel-arrow {
@@ -1031,8 +1060,10 @@ a {
     .carousel-content {
         max-width: none;
         height: 100%;
-        padding-top: 84px;
-        padding-bottom: 74px;
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        padding-top: 124px;
+        padding-bottom: 66px;
     }
 
     .carousel-content h1 {
