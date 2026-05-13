@@ -249,7 +249,11 @@ a {
 .carousel-content {
     width: min(1280px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 78px 0 86px;
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px 0 118px;
     color: #ffffff;
 }
 
@@ -261,7 +265,7 @@ a {
     margin: 0;
     max-width: 12ch;
     font-family: 'Forum', serif;
-    font-size: clamp(3rem, 6vw, 5.8rem);
+    font-size: clamp(2.7rem, 5.4vw, 5rem);
     line-height: 1.02;
 }
 
@@ -971,6 +975,11 @@ a {
         min-height: 560px;
     }
 
+    .carousel-content {
+        min-height: 560px;
+        padding-bottom: 102px;
+    }
+
     .carousel-arrow {
         width: 48px;
         height: 48px;
@@ -1014,6 +1023,12 @@ a {
 
     .hero-carousel {
         min-height: 500px;
+    }
+
+    .carousel-content {
+        min-height: 500px;
+        padding-top: 24px;
+        padding-bottom: 96px;
     }
 
     .carousel-arrow {
