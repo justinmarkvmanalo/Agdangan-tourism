@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousel = document.querySelector('[data-carousel]');
     const slides = carousel ? Array.from(carousel.querySelectorAll('[data-carousel-slide]')) : [];
     const dots = carousel ? Array.from(carousel.querySelectorAll('[data-carousel-dot]')) : [];
+    const prevButton = carousel?.querySelector('[data-carousel-prev]');
+    const nextButton = carousel?.querySelector('[data-carousel-next]');
 
     if (carousel && slides.length > 1) {
         let activeIndex = 0;
@@ -51,14 +53,32 @@ document.addEventListener('DOMContentLoaded', () => {
             setSlide((activeIndex + 1) % slides.length);
         };
 
+        const goToPrevious = () => {
+            setSlide((activeIndex - 1 + slides.length) % slides.length);
+        };
+
+        const restartAutoplay = () => {
+            window.clearInterval(autoplay);
+            autoplay = window.setInterval(advanceSlide, 4000);
+        };
+
         let autoplay = window.setInterval(advanceSlide, 4000);
 
         dots.forEach((dot, dotIndex) => {
             dot.addEventListener('click', () => {
                 setSlide(dotIndex);
-                window.clearInterval(autoplay);
-                autoplay = window.setInterval(advanceSlide, 4000);
+                restartAutoplay();
             });
+        });
+
+        prevButton?.addEventListener('click', () => {
+            goToPrevious();
+            restartAutoplay();
+        });
+
+        nextButton?.addEventListener('click', () => {
+            advanceSlide();
+            restartAutoplay();
         });
     }
 });

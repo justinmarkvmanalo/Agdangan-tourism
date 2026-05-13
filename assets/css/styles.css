@@ -216,7 +216,7 @@ a {
 }
 
 .hero-shell {
-    padding: 28px 0 18px;
+    padding: 0 0 18px;
 }
 
 .hero-carousel {
@@ -226,6 +226,7 @@ a {
     box-shadow: var(--shadow);
     min-height: 620px;
     background: #352148;
+    margin-top: 0;
 }
 
 .carousel-slide {
@@ -280,6 +281,46 @@ a {
     display: flex;
     gap: 10px;
     z-index: 2;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 12px 26px rgba(36, 23, 54, 0.18);
+    transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(236, 213, 154, 0.48);
+}
+
+.carousel-arrow span {
+    font-size: 2rem;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+.carousel-arrow--prev {
+    left: 26px;
+}
+
+.carousel-arrow--next {
+    right: 26px;
 }
 
 .carousel-dot {
@@ -930,6 +971,19 @@ a {
         min-height: 560px;
     }
 
+    .carousel-arrow {
+        width: 48px;
+        height: 48px;
+    }
+
+    .carousel-arrow--prev {
+        left: 16px;
+    }
+
+    .carousel-arrow--next {
+        right: 16px;
+    }
+
     .carousel-content h1 {
         font-size: clamp(2.5rem, 12vw, 4.4rem);
     }
@@ -955,11 +1009,15 @@ a {
     }
 
     .hero-shell {
-        padding-top: 18px;
+        padding-top: 0;
     }
 
     .hero-carousel {
         min-height: 500px;
+    }
+
+    .carousel-arrow {
+        display: none;
     }
 
     .section-heading h2,
