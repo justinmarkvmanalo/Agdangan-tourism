@@ -253,7 +253,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 32px 0 118px;
+    padding: 120px 0 96px;
     color: #ffffff;
 }
 
@@ -265,16 +265,16 @@ a {
     margin: 0;
     max-width: 12ch;
     font-family: 'Forum', serif;
-    font-size: clamp(2.7rem, 5.4vw, 5rem);
-    line-height: 1.02;
+    font-size: clamp(2.4rem, 4.8vw, 4.35rem);
+    line-height: 1.08;
 }
 
 .carousel-content p {
     max-width: 54ch;
-    margin: 18px 0 0;
+    margin: 16px 0 0;
     color: rgba(255, 255, 255, 0.88);
-    font-size: 1.03rem;
-    line-height: 1.7;
+    font-size: 0.98rem;
+    line-height: 1.65;
 }
 
 .carousel-dots {
@@ -977,7 +977,8 @@ a {
 
     .carousel-content {
         min-height: 560px;
-        padding-bottom: 102px;
+        padding-top: 108px;
+        padding-bottom: 88px;
     }
 
     .carousel-arrow {
@@ -1027,8 +1028,8 @@ a {
 
     .carousel-content {
         min-height: 500px;
-        padding-top: 24px;
-        padding-bottom: 96px;
+        padding-top: 96px;
+        padding-bottom: 84px;
     }
 
     .carousel-arrow {
