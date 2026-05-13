@@ -3,192 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partner Dashboard | Agdangan Tourism</title>
+    <title>News & Contact | Municipality of Agdangan</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>AGDANGAN <span>TOURISM</span></h1>
+    <div class="utility-bar">
+        <div class="utility-bar__inner">
+            <form class="utility-search" data-search-form>
+                <input type="search" name="query" placeholder="Search announcements and contacts" aria-label="Search announcements and contacts">
+            </form>
+            <div class="utility-meta">
+                <span>(042) 421 5551</span>
+                <span>mgoagdangan@gmail.com</span>
+                <a class="utility-cta" href="#contact-directory">Office Directory</a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="booking.html">Book Now</a></li>
-                <li><a href="shop.html">Marketplace</a></li>
-                <li><a href="dashboard.html">Partner Dashboard</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="dashboard-layout">
-        <aside class="sidebar">
-            <h3 style="margin-bottom: 2rem; padding: 0 1.5rem; color: var(--emerald-green);">Partner Portal</h3>
-            <ul class="sidebar-menu">
-                <li><a href="#" class="active" onclick="switchTab('bookings', this)">📋 Reservations</a></li>
-                <li><a href="#" onclick="switchTab('inventory', this)">📦 Inventory</a></li>
-                <li><a href="#" onclick="switchTab('schedules', this)">🗓️ Tour Schedules</a></li>
-            </ul>
-        </aside>
-
-        <main class="main-content">
-            <div id="bookings" class="tab-content active">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
-                    <div>
-                        <h2 style="font-size: 2rem;">Active Reservations</h2>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Real-time booking data</p>
-                    </div>
-                    <span class="tag tag-green" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Live</span>
-                </div>
-                <div class="stats-grid" style="margin-bottom: 2rem;">
-                    <div class="stat-card">
-                        <h4>Total Bookings</h4>
-                        <div class="value" id="total-bookings">0</div>
-                    </div>
-                    <div class="stat-card">
-                        <h4>This Month</h4>
-                        <div class="value" id="month-bookings">0</div>
-                    </div>
-                    <div class="stat-card">
-                        <h4>Revenue</h4>
-                        <div class="value" style="color: var(--emerald-green);" id="total-revenue">₱0</div>
-                    </div>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Booking ID</th>
-                            <th>Customer</th>
-                            <th>Item</th>
-                            <th>Date</th>
-                            <th>Guests</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bookings-table-body">
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="inventory" class="tab-content">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
-                    <div>
-                        <h2 style="font-size: 2rem;">Product Inventory</h2>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Manage your local products</p>
-                    </div>
-                    <button class="btn btn-primary" onclick="alert('Feature coming soon: Add New Product')">+ Add Product</button>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Price</th>
-                            <th>Stock Level</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="inventory-table-body">
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="schedules" class="tab-content">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
-                    <div>
-                        <h2 style="font-size: 2rem;">Tour Guide Schedules</h2>
-                        <p style="color: var(--text-muted); margin-top: 0.5rem;">Track availability and assignments</p>
-                    </div>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Activity</th>
-                            <th>Assigned Guide</th>
-                            <th>Availability</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id="schedules-table-body">
-                    </tbody>
-                </table>
-            </div>
-        </main>
     </div>
 
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Municipality of Agdangan home">
+                <div class="brand__seal">AG</div>
+                <div class="brand__copy">
+                    <strong>Municipality of Agdangan</strong>
+                    <span>Province of Quezon</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" data-site-nav>
+                <a href="index.html">Home</a>
+                <a href="booking.html">About Us</a>
+                <a href="shop.html">Services</a>
+                <a class="is-active" href="dashboard.html">News &amp; Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero">
+            <span class="eyebrow">News &amp; Contact</span>
+            <h1>Public announcements, office contacts, and schedule references.</h1>
+            <p>Stay informed through official notices, office updates, and direct communication channels from the municipality.</p>
+        </section>
+
+        <section class="section section--tight">
+            <div class="section-heading">
+                <span class="eyebrow">Recent Notices</span>
+                <h2>Recent announcements and public-facing reminders.</h2>
+            </div>
+            <div class="news-grid">
+                <article class="news-card">
+                    <span class="news-date">May 13, 2026</span>
+                    <h3>Municipal service desk hours updated</h3>
+                    <p>Use this space for changes in frontline service schedules, advisories, or temporary office arrangements.</p>
+                </article>
+                <article class="news-card">
+                    <span class="news-date">May 8, 2026</span>
+                    <h3>Community consultation schedule posted</h3>
+                    <p>Add meeting schedules, public hearings, and barangay coordination sessions in a clean card format.</p>
+                </article>
+                <article class="news-card">
+                    <span class="news-date">May 2, 2026</span>
+                    <h3>Health and welfare coordination reminder</h3>
+                    <p>Highlight cross-office programs and reminders for residents needing government support services.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--accent" id="contact-directory">
+            <div class="feature-layout">
+                <div>
+                    <span class="eyebrow">Contact Directory</span>
+                    <h2>Direct lines for the public-facing municipal offices.</h2>
+                    <p>These entries can be replaced with official office numbers, mobile lines, and active departmental email addresses.</p>
+                </div>
+                <div class="directory-list">
+                    <div class="directory-item">
+                        <strong>Mayor’s Office</strong>
+                        <span>(042) 421 5551</span>
+                    </div>
+                    <div class="directory-item">
+                        <strong>Municipal Administrator</strong>
+                        <span>admin@agdangan.gov.ph</span>
+                    </div>
+                    <div class="directory-item">
+                        <strong>Municipal Health Office</strong>
+                        <span>health@agdangan.gov.ph</span>
+                    </div>
+                    <div class="directory-item">
+                        <strong>Social Welfare and Development</strong>
+                        <span>mswd@agdangan.gov.ph</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Municipality of Agdangan</h3>
+                <p>Official local government information portal for public communication and service access.</p>
+            </div>
+            <div>
+                <h3>Sections</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="booking.html">About Us</a></p>
+                <p><a href="shop.html">Services</a></p>
+            </div>
+            <div>
+                <h3>Reach the Office</h3>
+                <p>(042) 421 5551</p>
+                <p>mgoagdangan@gmail.com</p>
+                <p>Agdangan, Quezon, Philippines</p>
+            </div>
+        </div>
+        <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
+    </footer>
+
     <script src="assets/js/app.js"></script>
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        function switchTab(tabId, el) {
-            document.querySelectorAll('.sidebar-menu a').forEach(a => a.classList.remove('active'));
-            el.classList.add('active');
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const bookings = getData('agd_bookings');
-            const bookingsBody = document.getElementById('bookings-table-body');
-            
-            document.getElementById('total-bookings').textContent = bookings.length;
-            document.getElementById('month-bookings').textContent = bookings.length;
-            
-            if (bookings.length === 0) {
-                bookingsBody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem;">No reservations yet. Try booking something!</td></tr>';
-            } else {
-                let revenue = 0;
-                bookings.forEach(b => {
-                    revenue += b.guests * 500;
-                    const row = `<tr>
-                        <td style="font-weight: 600;">#${b.id.toString().slice(-4)}</td>
-                        <td>${b.customer}</td>
-                        <td>${b.item}</td>
-                        <td>${b.date}</td>
-                        <td>${b.guests}</td>
-                        <td><span class="tag tag-green">${b.status}</span></td>
-                        <td><button style="padding: 0.4rem 0.8rem; font-size: 0.8rem; cursor: pointer; background: var(--emerald-green); color: white; border: none; border-radius: 6px;">View</button></td>
-                    </tr>`;
-                    bookingsBody.insertAdjacentHTML('beforeend', row);
-                });
-                document.getElementById('total-revenue').textContent = '₱' + revenue.toLocaleString();
-            }
-
-            const products = getData('agd_products');
-            const inventoryBody = document.getElementById('inventory-table-body');
-            products.forEach(p => {
-                const row = `<tr>
-                    <td style="font-weight: 500;">${p.name}</td>
-                    <td style="font-weight: 600; color: var(--emerald-dark);">₱${p.price}</td>
-                    <td style="color: ${p.stock < 10 ? '#dc3545' : 'inherit'}; font-weight: ${p.stock < 10 ? 'bold' : 'normal'};">${p.stock}</td>
-                    <td>${p.stock > 0 ? '<span class="tag tag-green">In Stock</span>' : '<span class="tag" style="background: #dc3545; color: white;">Out of Stock</span>'}</td>
-                    <td><button style="padding: 0.4rem 0.8rem; font-size: 0.8rem; cursor: pointer; background: var(--azure-blue); color: white; border: none; border-radius: 6px;">Manage</button></td>
-                </tr>`;
-                inventoryBody.insertAdjacentHTML('beforeend', row);
-            });
-
-            const tours = getData('agd_tours');
-            const schedulesBody = document.getElementById('schedules-table-body');
-            tours.forEach(t => {
-                const row = `<tr>
-                    <td style="font-weight: 500;">${t.name}</td>
-                    <td>${t.guide}</td>
-                    <td>${t.availability}</td>
-                    <td><span class="tag tag-blue">Active</span></td>
-                </tr>`;
-                schedulesBody.insertAdjacentHTML('beforeend', row);
-            });
-        });
-    </script>
 </body>
 </html>

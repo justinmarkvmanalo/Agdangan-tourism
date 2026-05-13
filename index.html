@@ -3,203 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agdangan Tourism | Eco-Resort & Activity Booking</title>
+    <title>Municipality of Agdangan | Official Portal</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>AGDANGAN <span>TOURISM</span></h1>
+    <div class="utility-bar">
+        <div class="utility-bar__inner">
+            <form class="utility-search" data-search-form>
+                <input type="search" name="query" placeholder="Search services, updates, contacts" aria-label="Search site">
+            </form>
+            <div class="utility-meta">
+                <span>(042) 421 5551</span>
+                <span>mgoagdangan@gmail.com</span>
+                <a class="utility-cta" href="dashboard.html">Contact Us</a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="booking.html">Book Now</a></li>
-                <li><a href="shop.html">Marketplace</a></li>
-                <li><a href="dashboard.html">Partner Dashboard</a></li>
-            </ul>
-        </nav>
+    </div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Municipality of Agdangan home">
+                <div class="brand__seal">AG</div>
+                <div class="brand__copy">
+                    <strong>Municipality of Agdangan</strong>
+                    <span>Province of Quezon</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" data-site-nav>
+                <a class="is-active" href="index.html">Home</a>
+                <a href="booking.html">About Us</a>
+                <a href="shop.html">Services</a>
+                <a href="dashboard.html">News &amp; Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Experience the "Green & Blue"</h2>
-            <p>Discover Agdangan's lush eco-farms and serene coastal landscapes. Book your next escape today and immerse yourself in nature's finest offerings.</p>
-            <div class="hero-btns">
-                <a href="booking.html" class="btn btn-primary">Explore Resorts</a>
-                <a href="shop.html" class="btn btn-outline">Shop Local Products</a>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="hero-shell">
+            <div class="hero-grid hero-grid--home">
+                <article class="hero-card hero-card--primary">
+                    <span class="eyebrow">Official Municipal Portal</span>
+                    <h1>Public information, local services, and community updates in one place.</h1>
+                    <p>
+                        Access municipal announcements, resident services, leadership information,
+                        and office contacts through a cleaner, more organized public portal.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button--primary" href="shop.html">View Services</a>
+                        <a class="button button--ghost" href="dashboard.html">Latest Updates</a>
+                    </div>
+                    <div class="stat-row">
+                        <div class="stat-chip">
+                            <strong>24/7</strong>
+                            <span>Online access</span>
+                        </div>
+                        <div class="stat-chip">
+                            <strong>4</strong>
+                            <span>Core sections</span>
+                        </div>
+                        <div class="stat-chip">
+                            <strong>1</strong>
+                            <span>Unified portal</span>
+                        </div>
+                    </div>
+                </article>
 
-    <section class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Agdangan?</h2>
-                <p>Where nature meets authentic Filipino hospitality. Experience the perfect blend of eco-tourism and coastal charm.</p>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-img" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
-                        <div class="card-img-icon">🌱</div>
+                <article class="hero-card hero-card--image hero-card--hall">
+                    <div class="hero-card__overlay">
+                        <span class="panel-label">Municipal Hall</span>
+                        <h2>Local governance and frontline public assistance.</h2>
                     </div>
-                    <div class="card-content">
-                        <span class="tag tag-green">Eco-Farms</span>
-                        <h3>Sustainable Agri-Tourism</h3>
-                        <p>Experience local farming culture and taste the freshest organic products straight from the source. Our community farms await your visit.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);">
-                        <div class="card-img-icon">🏝️</div>
-                    </div>
-                    <div class="card-content">
-                        <span class="tag tag-blue">Coastal</span>
-                        <h3>Pristine Shorelines</h3>
-                        <p>Relax on undisturbed beaches or enjoy boat tours around Agdangan's beautiful coastline. Crystal waters and golden sands await.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img" style="background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);">
-                        <div class="card-img-icon">🎁</div>
-                    </div>
-                    <div class="card-content">
-                        <span class="tag tag-gold">Local Goods</span>
-                        <h3>Authentic Crafts</h3>
-                        <p>Support the community by purchasing unique coconut-based products and handmade souvenirs. Take a piece of Agdangan home.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </article>
 
-    <section class="map-showcase">
-        <div class="container">
-            <div class="map-copy">
-                <span class="eyebrow">3D Map View</span>
-                <h2>Explore Agdangan Area by Area</h2>
-                <p>Pinch to zoom, drag around town, or tap a zone below to jump to key parts of Agdangan. The frame keeps a 3D presentation, while the map itself stays fully interactive on touch screens.</p>
-                <div class="map-pills">
-                    <span class="map-pill">Pinch zoom</span>
-                    <span class="map-pill">Tap hotspots</span>
-                    <span class="map-pill">Area focus</span>
-                </div>
-                <div class="map-zone-list">
-                    <button class="map-zone active" type="button" data-map-focus="municipal-center">Municipal Center</button>
-                    <button class="map-zone" type="button" data-map-focus="coastal-belt">Coastal Belt</button>
-                    <button class="map-zone" type="button" data-map-focus="farm-zone">Farm Zone</button>
-                    <button class="map-zone" type="button" data-map-focus="gateway-route">Gateway Route</button>
-                </div>
-                <div class="map-resort-list">
-                    <h3>Resort Highlights</h3>
-                    <button class="map-resort" type="button" data-map-resort="acesor-beach">
-                        <strong>Acesor Beach Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="christal-beach">
-                        <strong>Christal Beach Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="javierama-beach">
-                        <strong>Javierama Beach Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="joerich-beach">
-                        <strong>Joerich Beach Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="la-cereza">
-                        <strong>La Cereza Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="montecarlo-beach">
-                        <strong>Montecarlo Beach Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="playa-de-nubla">
-                        <strong>Playa de Nubla Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="pobeda-beach">
-                        <strong>Pobeda Beach Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="salvatierra-beach">
-                        <strong>Salvatierra Beach Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                    <button class="map-resort" type="button" data-map-resort="yellow-house">
-                        <strong>The Yellow House Resort</strong>
-                        <span>Official Agdangan resort listing</span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="map-scene">
-                <div class="map-glow"></div>
-                <div class="map-panel">
-                    <div class="map-overlay">
-                        <div class="map-badge">Agdangan, Quezon</div>
-                        <div class="map-status">Interactive map enabled</div>
+                <article class="hero-card hero-card--image hero-card--sanctuary">
+                    <div class="hero-card__overlay">
+                        <span class="panel-label">Community Identity</span>
+                        <h2>Programs, heritage, and civic pride presented with a clearer structure.</h2>
                     </div>
-                    <div id="agdangan-map" class="map-canvas" aria-label="Interactive map of Agdangan"></div>
-                </div>
-                <div class="map-ledge" aria-hidden="true"></div>
-                <div class="map-info-card" id="map-info-card">
-                    <h3>Municipal Center</h3>
-                    <p>Start here to orient visitors around the town proper and nearby service points.</p>
-                </div>
-                <div class="map-shadow"></div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Agdangan Tourism</h4>
-                <p>Promoting sustainable eco-tourism and supporting local communities through responsible travel experiences.</p>
+        <section class="section">
+            <div class="section-heading">
+                <span class="eyebrow">Quick Access</span>
+                <h2>Common tasks for residents and visitors to the municipal office.</h2>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="booking.html" style="color: white; text-decoration: none;">Book a Stay</a></p>
-                <p><a href="shop.html" style="color: white; text-decoration: none;">Local Products</a></p>
-                <p><a href="dashboard.html" style="color: white; text-decoration: none;">Partner Portal</a></p>
+            <div class="info-grid">
+                <article class="info-card">
+                    <span class="card-kicker">Citizen Services</span>
+                    <h3>Permits and clearances</h3>
+                    <p>Review requirements for business permits, barangay coordination, and local document requests.</p>
+                </article>
+                <article class="info-card">
+                    <span class="card-kicker">Social Support</span>
+                    <h3>Health and welfare access</h3>
+                    <p>Find referral pathways for health consultations, assistance desks, and social protection programs.</p>
+                </article>
+                <article class="info-card">
+                    <span class="card-kicker">Public Updates</span>
+                    <h3>Announcements and schedules</h3>
+                    <p>Track municipal notices, consultation meetings, and service windows from one central page.</p>
+                </article>
             </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Agdangan Tourism Development Office</p>
-                <p>Province of Quezon, Philippines</p>
+        </section>
+
+        <section class="section section--accent">
+            <div class="feature-layout">
+                <div>
+                    <span class="eyebrow">Municipal Priorities</span>
+                    <h2>Designed to support public service, transparency, and easier access to information.</h2>
+                    <p>
+                        The municipal website can highlight service delivery, community programs,
+                        local notices, and office access points in a format that is easier for
+                        residents and stakeholders to navigate.
+                    </p>
+                </div>
+                <div class="bullet-panel">
+                    <div class="bullet-row">
+                        <strong>Homepage</strong>
+                        <span>Government-style split hero and quick access sections</span>
+                    </div>
+                    <div class="bullet-row">
+                        <strong>About</strong>
+                        <span>Municipal profile, leadership, and priorities</span>
+                    </div>
+                    <div class="bullet-row">
+                        <strong>Services</strong>
+                        <span>Frontline offices, procedures, and service channels</span>
+                    </div>
+                    <div class="bullet-row">
+                        <strong>News &amp; Contact</strong>
+                        <span>Announcements, office directory, and communication details</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Municipality of Agdangan</h3>
+                <p>Official local government information portal for public communication and service access.</p>
+            </div>
+            <div>
+                <h3>Sections</h3>
+                <p><a href="booking.html">About Us</a></p>
+                <p><a href="shop.html">Services</a></p>
+                <p><a href="dashboard.html">News &amp; Contact</a></p>
+            </div>
+            <div>
+                <h3>Reach the Office</h3>
+                <p>(042) 421 5551</p>
+                <p>mgoagdangan@gmail.com</p>
+                <p>Agdangan, Quezon, Philippines</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Agdangan Tourism Development Office. All Rights Reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.5;">Integrated Eco-Resort & Activity Booking System</p>
-        </div>
+        <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
     </footer>
 
     <script src="assets/js/app.js"></script>
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin="">
-    </script>
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
 </body>
 </html>

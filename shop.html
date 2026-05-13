@@ -3,93 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace | Agdangan Tourism</title>
+    <title>Services | Municipality of Agdangan</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>AGDANGAN <span>TOURISM</span></h1>
+    <div class="utility-bar">
+        <div class="utility-bar__inner">
+            <form class="utility-search" data-search-form>
+                <input type="search" name="query" placeholder="Search public services" aria-label="Search public services">
+            </form>
+            <div class="utility-meta">
+                <span>(042) 421 5551</span>
+                <span>mgoagdangan@gmail.com</span>
+                <a class="utility-cta" href="dashboard.html">Contact Us</a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="booking.html">Book Now</a></li>
-                <li><a href="shop.html">Marketplace</a></li>
-                <li><a href="dashboard.html">Partner Dashboard</a></li>
-            </ul>
-        </nav>
+    </div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Municipality of Agdangan home">
+                <div class="brand__seal">AG</div>
+                <div class="brand__copy">
+                    <strong>Municipality of Agdangan</strong>
+                    <span>Province of Quezon</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" data-site-nav>
+                <a href="index.html">Home</a>
+                <a href="booking.html">About Us</a>
+                <a class="is-active" href="shop.html">Services</a>
+                <a href="dashboard.html">News &amp; Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container" style="padding-top: 120px;">
-        <div class="section-header">
-            <h2>Agdangan Local Products</h2>
-            <p>Support local coconut farmers and artisans. Purchase authentic products crafted with love.</p>
-        </div>
+    <main class="page-main">
+        <section class="page-hero">
+            <span class="eyebrow">Public Services</span>
+            <h1>Frontline transactions organized by office and purpose.</h1>
+            <p>Browse common transactions and service channels arranged for easier use by residents, business owners, and partner agencies.</p>
+        </section>
 
-        <div id="product-grid" class="product-grid">
-        </div>
+        <section class="section section--tight">
+            <div class="service-grid">
+                <article class="service-card">
+                    <span class="card-kicker">Business Desk</span>
+                    <h2>Permits and renewals</h2>
+                    <p>Business permit processing, documentary requirements, and payment coordination.</p>
+                    <a href="dashboard.html">Ask the office</a>
+                </article>
+                <article class="service-card">
+                    <span class="card-kicker">Civil Support</span>
+                    <h2>Certification requests</h2>
+                    <p>Referral information for certificates, local endorsements, and records assistance.</p>
+                    <a href="dashboard.html">Check contacts</a>
+                </article>
+                <article class="service-card">
+                    <span class="card-kicker">Health Office</span>
+                    <h2>Consultation and public health</h2>
+                    <p>Advisories, clinic schedules, and health campaign support for the community.</p>
+                    <a href="dashboard.html">View schedules</a>
+                </article>
+                <article class="service-card">
+                    <span class="card-kicker">Social Welfare</span>
+                    <h2>Community assistance</h2>
+                    <p>Program orientation, referral channels, and support information for households in need.</p>
+                    <a href="dashboard.html">Reach support</a>
+                </article>
+                <article class="service-card">
+                    <span class="card-kicker">Engineering</span>
+                    <h2>Infrastructure concerns</h2>
+                    <p>Project status references, maintenance coordination, and local infrastructure concerns.</p>
+                    <a href="dashboard.html">Submit inquiry</a>
+                </article>
+                <article class="service-card">
+                    <span class="card-kicker">Agriculture</span>
+                    <h2>Farmer and fisheries support</h2>
+                    <p>Advisory services, livelihood coordination, and production-related local assistance.</p>
+                    <a href="dashboard.html">See updates</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--accent">
+            <div class="feature-layout">
+                <div>
+                    <span class="eyebrow">Service Notes</span>
+                    <h2>Each category can connect to requirements, forms, or office-specific workflows.</h2>
+                    <p>Use this page as the public entry point for municipal transactions, service guidelines, and downloadable resources.</p>
+                </div>
+                <div class="bullet-panel">
+                    <div class="bullet-row">
+                        <strong>Better fit</strong>
+                        <span>Aligned to local government information needs</span>
+                    </div>
+                    <div class="bullet-row">
+                        <strong>Next step</strong>
+                        <span>Link each card to actual forms or downloadable requirements</span>
+                    </div>
+                    <div class="bullet-row">
+                        <strong>Search</strong>
+                        <span>Header search can later connect to a real site index</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Agdangan Tourism</h4>
-                <p>Promoting sustainable eco-tourism and supporting local communities.</p>
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Municipality of Agdangan</h3>
+                <p>Official local government information portal for public communication and service access.</p>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html" style="color: white; text-decoration: none;">Home</a></p>
-                <p><a href="booking.html" style="color: white; text-decoration: none;">Book Now</a></p>
+            <div>
+                <h3>Sections</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="booking.html">About Us</a></p>
+                <p><a href="dashboard.html">News &amp; Contact</a></p>
+            </div>
+            <div>
+                <h3>Reach the Office</h3>
+                <p>(042) 421 5551</p>
+                <p>mgoagdangan@gmail.com</p>
+                <p>Agdangan, Quezon, Philippines</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Agdangan Tourism Development Office. All Rights Reserved.</p>
-        </div>
+        <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
     </footer>
 
     <script src="assets/js/app.js"></script>
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const products = getData('agd_products');
-            const grid = document.getElementById('product-grid');
-            
-            products.forEach(p => {
-                const card = document.createElement('div');
-                card.className = 'card product-card';
-                const bgGradient = p.id % 3 === 0 ? 'linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%)' : 
-                                   p.id % 3 === 1 ? 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)' : 
-                                   'linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)';
-                card.innerHTML = `
-                    <div class="card-img" style="background: ${bgGradient};">
-                        <div class="card-img-icon">🥥</div>
-                    </div>
-                    <div class="card-content">
-                        <h3>${p.name}</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Authentic Agdangan Quality</p>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span class="price">₱${p.price}</span>
-                            <span class="stock ${p.stock < 10 ? 'low' : ''}">Stock: ${p.stock}</span>
-                        </div>
-                        <button onclick="submitOrder(${p.id}, '${p.name}')" class="btn btn-secondary" ${p.stock === 0 ? 'disabled' : ''}>
-                            ${p.stock === 0 ? 'Out of Stock' : 'Order Now'}
-                        </button>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        });
-    </script>
 </body>
 </html>

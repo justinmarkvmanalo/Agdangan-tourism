@@ -3,150 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Agdangan Tourism</title>
+    <title>About Us | Municipality of Agdangan</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>AGDANGAN <span>TOURISM</span></h1>
+    <div class="utility-bar">
+        <div class="utility-bar__inner">
+            <form class="utility-search" data-search-form>
+                <input type="search" name="query" placeholder="Search site information" aria-label="Search site">
+            </form>
+            <div class="utility-meta">
+                <span>(042) 421 5551</span>
+                <span>mgoagdangan@gmail.com</span>
+                <a class="utility-cta" href="dashboard.html">Contact Us</a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="booking.html">Book Now</a></li>
-                <li><a href="shop.html">Marketplace</a></li>
-                <li><a href="dashboard.html">Partner Dashboard</a></li>
-            </ul>
-        </nav>
+    </div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html" aria-label="Municipality of Agdangan home">
+                <div class="brand__seal">AG</div>
+                <div class="brand__copy">
+                    <strong>Municipality of Agdangan</strong>
+                    <span>Province of Quezon</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav" data-site-nav>
+                <a href="index.html">Home</a>
+                <a class="is-active" href="booking.html">About Us</a>
+                <a href="shop.html">Services</a>
+                <a href="dashboard.html">News &amp; Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container" style="padding-top: 120px;">
-        <div class="section-header">
-            <h2>Plan Your Adventure</h2>
-            <p>Discover eco-resorts and activities in Agdangan. Book your unforgettable experience today.</p>
-        </div>
+    <main class="page-main">
+        <section class="page-hero">
+            <span class="eyebrow">About the Municipality</span>
+            <h1>Leadership, identity, and development direction.</h1>
+            <p>Learn about the municipality, its leadership structure, and the public mission guiding local programs and services.</p>
+        </section>
 
-        <div class="booking-grid">
-            <div class="listings">
-                <h3>Featured Eco-Resorts & Activities</h3>
-                <div class="booking-card">
-                    <div class="booking-card-img" style="background: linear-gradient(135deg, #60ad5e 0%, #00c853 100%);">
-                        <span style="font-size: 3rem;">🏨</span>
-                    </div>
-                    <div class="booking-card-content">
-                        <span class="tag tag-green">Eco-Resort</span>
-                        <h4>Emerald Cove Eco-Resort</h4>
-                        <p>Coastal serenity meets sustainable luxury. Wake up to ocean views and organic farm-to-table dining.</p>
-                        <span class="price">₱2,500 / Night</span>
-                    </div>
+        <section class="section">
+            <div class="split-layout">
+                <article class="info-card info-card--soft">
+                    <span class="card-kicker">Municipal Profile</span>
+                    <h2>Serving residents through coordinated local governance.</h2>
+                    <p>Present local priorities, governance details, and civic information in a format suited for residents, offices, and stakeholders.</p>
+                </article>
+                <article class="info-card info-card--soft">
+                    <span class="card-kicker">Core Priorities</span>
+                    <h2>Responsive services, transparency, and community participation.</h2>
+                    <p>Use this area for municipal vision statements, major programs, and cross-office coordination highlights.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="section-heading">
+                <span class="eyebrow">Leadership</span>
+                <h2>Suggested structure for municipal officials and office heads.</h2>
+            </div>
+            <div class="info-grid">
+                <article class="info-card">
+                    <span class="card-kicker">Executive</span>
+                    <h3>Mayor’s Office</h3>
+                    <p>Municipal leadership, executive directives, inter-office coordination, and public representation.</p>
+                </article>
+                <article class="info-card">
+                    <span class="card-kicker">Legislative</span>
+                    <h3>Sangguniang Bayan</h3>
+                    <p>Local ordinances, committee work, and council-led consultations for community issues.</p>
+                </article>
+                <article class="info-card">
+                    <span class="card-kicker">Administration</span>
+                    <h3>Municipal Offices</h3>
+                    <p>Administrative, treasury, planning, health, social welfare, and engineering service units.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--accent">
+            <div class="feature-layout">
+                <div>
+                    <span class="eyebrow">Community Snapshot</span>
+                    <h2>A municipal portal built around identity, governance, and public trust.</h2>
+                    <p>Use this section to describe local heritage, strategic direction, and the values shaping municipal decision-making.</p>
                 </div>
-                <div class="booking-card">
-                    <div class="booking-card-img" style="background: linear-gradient(135deg, #58a5f0 0%, #0277bd 100%);">
-                        <span style="font-size: 3rem;">🚣</span>
+                <div class="bullet-panel">
+                    <div class="bullet-row">
+                        <strong>Use case</strong>
+                        <span>Citizen-facing information portal</span>
                     </div>
-                    <div class="booking-card-content">
-                        <span class="tag tag-blue">Activity</span>
-                        <h4>Mangrove Boat Tour</h4>
-                        <p>Explore Agdangan's diverse mangrove ecosystem with expert local guides.</p>
-                        <span class="price">₱500 / Person</span>
+                    <div class="bullet-row">
+                        <strong>Audience</strong>
+                        <span>Residents, partner offices, and stakeholders</span>
                     </div>
-                </div>
-                <div class="booking-card">
-                    <div class="booking-card-img" style="background: linear-gradient(135deg, #81c784 0%, #2e7d32 100%);">
-                        <span style="font-size: 3rem;">🌾</span>
-                    </div>
-                    <div class="booking-card-content">
-                        <span class="tag tag-green">Farm Stay</span>
-                        <h4>Green Valley Farm Stay</h4>
-                        <p>Experience authentic farming life with hands-on activities and local cuisine.</p>
-                        <span class="price">₱1,800 / Night</span>
-                    </div>
-                </div>
-                <div class="booking-card">
-                    <div class="booking-card-img" style="background: linear-gradient(135deg, #90caf9 0%, #1565c0 100%);">
-                        <span style="font-size: 3rem;">🏖️</span>
-                    </div>
-                    <div class="booking-card-content">
-                        <span class="tag tag-blue">Beach Resort</span>
-                        <h4>Azure Beach Cottages</h4>
-                        <p>Seafront cottages for relaxed coastal stays, sunrise views, and easy access to Agdangan's blue-water attractions.</p>
-                        <span class="price">₱3,200 / Night</span>
-                    </div>
-                </div>
-                <div class="booking-card">
-                    <div class="booking-card-img" style="background: linear-gradient(135deg, #a5d6a7 0%, #388e3c 100%);">
-                        <span style="font-size: 3rem;">⛰️</span>
-                    </div>
-                    <div class="booking-card-content">
-                        <span class="tag tag-green">Adventure</span>
-                        <h4>Mt. Agdangan Hiking</h4>
-                        <p>Trek through lush trails to stunning viewpoints. Difficulty: Moderate</p>
-                        <span class="price">₱350 / Person</span>
+                    <div class="bullet-row">
+                        <strong>Content type</strong>
+                        <span>Profile pages, policy updates, office directory, announcements</span>
                     </div>
                 </div>
             </div>
-
-            <div class="booking-form-container">
-                <h3>Make a Reservation</h3>
-                <form id="booking-form" onsubmit="submitBooking(event)">
-                    <div class="form-group" style="margin-bottom: 1.25rem;">
-                        <label>Select Resort/Activity</label>
-                        <select name="itemName" required>
-                            <option value="Emerald Cove Eco-Resort">Emerald Cove Eco-Resort</option>
-                            <option value="Mangrove Boat Tour">Mangrove Boat Tour</option>
-                            <option value="Green Valley Farm Stay">Green Valley Farm Stay</option>
-                            <option value="Azure Beach Cottages">Azure Beach Cottages</option>
-                            <option value="Mt. Agdangan Hiking">Mt. Agdangan Hiking</option>
-                        </select>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 1.25rem;">
-                        <label>Full Name</label>
-                        <input type="text" name="customerName" required placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group" style="margin-bottom: 1.25rem;">
-                        <label>Date</label>
-                        <input type="date" name="date" required>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 1.5rem;">
-                        <label>Number of Guests</label>
-                        <input type="number" name="guests" min="1" value="1" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking</button>
-                </form>
-            </div>
-        </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Agdangan Tourism</h4>
-                <p>Promoting sustainable eco-tourism and supporting local communities.</p>
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Municipality of Agdangan</h3>
+                <p>Official local government information portal for public communication and service access.</p>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <p><a href="index.html" style="color: white; text-decoration: none;">Home</a></p>
-                <p><a href="shop.html" style="color: white; text-decoration: none;">Marketplace</a></p>
+            <div>
+                <h3>Sections</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="shop.html">Services</a></p>
+                <p><a href="dashboard.html">News &amp; Contact</a></p>
+            </div>
+            <div>
+                <h3>Reach the Office</h3>
+                <p>(042) 421 5551</p>
+                <p>mgoagdangan@gmail.com</p>
+                <p>Agdangan, Quezon, Philippines</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Agdangan Tourism Development Office. All Rights Reserved.</p>
-        </div>
+        <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
     </footer>
 
     <script src="assets/js/app.js"></script>
-    <script>
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-    </script>
 </body>
 </html>
