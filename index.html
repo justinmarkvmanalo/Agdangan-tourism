@@ -55,47 +55,65 @@
 
     <main>
         <section class="hero-shell">
-            <div class="hero-grid hero-grid--home">
-                <article class="hero-card hero-card--primary">
-                    <span class="eyebrow">Official Municipal Portal</span>
-                    <h1>Public information, local services, and community updates in one place.</h1>
-                    <p>
-                        Access municipal announcements, resident services, leadership information,
-                        and office contacts through a cleaner, more organized public portal.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="button button--primary" href="shop.html">View Services</a>
-                        <a class="button button--ghost" href="dashboard.html">Latest Updates</a>
-                    </div>
-                    <div class="stat-row">
-                        <div class="stat-chip">
-                            <strong>24/7</strong>
-                            <span>Online access</span>
-                        </div>
-                        <div class="stat-chip">
-                            <strong>4</strong>
-                            <span>Core sections</span>
-                        </div>
-                        <div class="stat-chip">
-                            <strong>1</strong>
-                            <span>Unified portal</span>
+            <section class="hero-carousel" data-carousel>
+                <article class="carousel-slide is-active" data-carousel-slide style="background-image: linear-gradient(180deg, rgba(8, 18, 29, 0.12), rgba(8, 18, 29, 0.6)), url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="carousel-content">
+                        <span class="eyebrow">Official Municipal Portal</span>
+                        <h1>Public information, local services, and community updates in one place.</h1>
+                        <p>Access municipal announcements, resident services, leadership information, and office contacts through a clearer public portal.</p>
+                        <div class="hero-actions">
+                            <a class="button button--primary" href="shop.html">View Services</a>
+                            <a class="button button--ghost" href="dashboard.html">Latest Updates</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="hero-card hero-card--image hero-card--hall">
-                    <div class="hero-card__overlay">
-                        <span class="panel-label">Municipal Hall</span>
-                        <h2>Local governance and frontline public assistance.</h2>
+                <article class="carousel-slide" data-carousel-slide style="background-image: linear-gradient(180deg, rgba(8, 18, 29, 0.1), rgba(8, 18, 29, 0.56)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="carousel-content">
+                        <span class="eyebrow">Citizen Access</span>
+                        <h1>Find announcements, office schedules, and service channels faster.</h1>
+                        <p>Use the homepage carousel to surface major advisories, office reminders, and public-facing municipal priorities.</p>
+                        <div class="hero-actions">
+                            <a class="button button--primary" href="dashboard.html">View Notices</a>
+                            <a class="button button--ghost" href="booking.html">About The Municipality</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="hero-card hero-card--image hero-card--sanctuary">
-                    <div class="hero-card__overlay">
-                        <span class="panel-label">Community Identity</span>
-                        <h2>Programs, heritage, and civic pride presented with a clearer structure.</h2>
+                <article class="carousel-slide" data-carousel-slide style="background-image: linear-gradient(180deg, rgba(8, 18, 29, 0.08), rgba(8, 18, 29, 0.58)), url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1600&q=80');">
+                    <div class="carousel-content">
+                        <span class="eyebrow">Community Programs</span>
+                        <h1>Highlight projects, consultations, and local government priorities.</h1>
+                        <p>The first section now rotates automatically so the homepage can showcase multiple visual messages instead of one static panel.</p>
+                        <div class="hero-actions">
+                            <a class="button button--primary" href="booking.html">Learn More</a>
+                            <a class="button button--ghost" href="dashboard.html#contact-directory">Contact Offices</a>
+                        </div>
                     </div>
                 </article>
+
+                <div class="carousel-dots" aria-label="Homepage highlights">
+                    <button class="carousel-dot is-active" type="button" data-carousel-dot aria-label="Show slide 1"></button>
+                    <button class="carousel-dot" type="button" data-carousel-dot aria-label="Show slide 2"></button>
+                    <button class="carousel-dot" type="button" data-carousel-dot aria-label="Show slide 3"></button>
+                </div>
+            </section>
+
+            <div class="hero-summary">
+                <div class="stat-row">
+                    <div class="stat-chip">
+                        <strong>24/7</strong>
+                        <span>Online access</span>
+                    </div>
+                    <div class="stat-chip">
+                        <strong>4</strong>
+                        <span>Core sections</span>
+                    </div>
+                    <div class="stat-chip">
+                        <strong>1</strong>
+                        <span>Unified portal</span>
+                    </div>
+                </div>
             </div>
         </section>
 

@@ -214,66 +214,86 @@ a {
     padding: 28px 0 18px;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.45fr 0.95fr;
-    gap: 22px;
-    grid-template-areas:
-        "primary secondary"
-        "primary tertiary";
-}
-
-.hero-card {
+.hero-carousel {
     position: relative;
-    min-height: 240px;
     border-radius: 0;
     overflow: hidden;
-    background: var(--card);
     box-shadow: var(--shadow);
+    min-height: 620px;
+    background: #0f2032;
 }
 
-.hero-card--primary {
-    grid-area: primary;
-    padding: 52px;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
-        linear-gradient(135deg, #d7edf7 0%, #eef8fc 100%);
-}
-
-.hero-card--primary::before {
-    content: '';
+.carousel-slide {
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(180deg, rgba(74, 151, 207, 0.05), transparent 45%),
-        url("data:image/svg+xml,%3Csvg width='220' height='140' viewBox='0 0 220 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 112c26-17 45-16 61-8 17 9 35 16 57 4 18-9 29-25 45-24 19 1 35 16 57 28V140H0V112Z' fill='%2398cde6' fill-opacity='0.32'/%3E%3Cpath d='M0 94c20-7 34-7 48-2 17 7 38 18 64 6 20-9 33-27 56-25 15 1 30 11 52 21V140H0V94Z' fill='%23c7e3f1' fill-opacity='0.58'/%3E%3C/svg%3E") right bottom / 380px auto no-repeat;
+    opacity: 0;
     pointer-events: none;
-}
-
-.hero-card--image {
+    transition: opacity 0.8s ease;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: end;
 }
 
-.hero-card--hall {
-    grid-area: secondary;
-    background-image:
-        linear-gradient(180deg, rgba(11, 24, 38, 0.08), rgba(11, 24, 38, 0.46)),
-        url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80');
+.carousel-slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.hero-card--sanctuary {
-    grid-area: tertiary;
-    background-image:
-        linear-gradient(180deg, rgba(11, 24, 38, 0.08), rgba(11, 24, 38, 0.54)),
-        url('https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=1200&q=80');
-}
-
-.hero-card__overlay {
-    position: absolute;
-    inset: auto 0 0 0;
-    padding: 28px;
+.carousel-content {
+    width: min(1280px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 78px 0 86px;
     color: #ffffff;
+}
+
+.carousel-content .eyebrow {
+    color: rgba(255, 255, 255, 0.84);
+}
+
+.carousel-content h1 {
+    margin: 0;
+    max-width: 12ch;
+    font-family: 'Forum', serif;
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    line-height: 1.02;
+}
+
+.carousel-content p {
+    max-width: 54ch;
+    margin: 18px 0 0;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.03rem;
+    line-height: 1.7;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.36);
+    cursor: pointer;
+}
+
+.carousel-dot.is-active {
+    background: #ffffff;
+}
+
+.hero-summary {
+    width: min(1280px, calc(100% - 40px));
+    margin: 18px auto 0;
 }
 
 .eyebrow,
@@ -297,7 +317,6 @@ a {
     color: rgba(255, 255, 255, 0.88);
 }
 
-.hero-card--primary h1,
 .page-hero h1,
 .section-heading h2,
 .feature-layout h2,
@@ -309,14 +328,7 @@ a {
     letter-spacing: 0.01em;
 }
 
-.hero-card--primary h1 {
-    position: relative;
-    z-index: 1;
-    max-width: 11ch;
-    font-size: clamp(3rem, 6vw, 5.8rem);
-}
-
-.hero-card--primary p,
+.carousel-content p,
 .page-hero p,
 .section-heading p,
 .info-card p,
@@ -329,17 +341,7 @@ a {
     line-height: 1.7;
 }
 
-.hero-card--primary p {
-    position: relative;
-    z-index: 1;
-    max-width: 52ch;
-    margin: 22px 0 0;
-    font-size: 1.03rem;
-}
-
 .hero-actions {
-    position: relative;
-    z-index: 1;
     display: flex;
     gap: 14px;
     margin-top: 28px;
@@ -398,14 +400,6 @@ a {
 .stat-chip span {
     color: var(--ink-soft);
     font-size: 0.92rem;
-}
-
-.hero-card__overlay h2 {
-    margin: 10px 0 0;
-    max-width: 18ch;
-    font-family: 'Forum', serif;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.06;
 }
 
 .page-main {
@@ -563,7 +557,6 @@ a {
 }
 
 @media (max-width: 1080px) {
-    .hero-grid,
     .feature-layout,
     .info-grid,
     .service-grid,
@@ -573,14 +566,7 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .hero-grid {
-        grid-template-areas:
-            "primary"
-            "secondary"
-            "tertiary";
-    }
-
-    .hero-card--primary h1,
+    .carousel-content h1,
     .page-hero h1 {
         max-width: none;
     }
@@ -644,14 +630,18 @@ a {
         display: flex;
     }
 
-    .hero-card--primary,
+    .carousel-content,
     .info-card,
     .service-card,
     .news-card {
         padding: 22px;
     }
 
-    .hero-card--primary h1 {
+    .hero-carousel {
+        min-height: 560px;
+    }
+
+    .carousel-content h1 {
         font-size: clamp(2.5rem, 12vw, 4.4rem);
     }
 }
@@ -679,11 +669,10 @@ a {
         padding-top: 18px;
     }
 
-    .hero-card {
-        min-height: 220px;
+    .hero-carousel {
+        min-height: 500px;
     }
 
-    .hero-card__overlay h2,
     .section-heading h2,
     .feature-layout h2,
     .info-card h2,
