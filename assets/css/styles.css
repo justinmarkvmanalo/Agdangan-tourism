@@ -259,24 +259,34 @@ a {
     color: #ffffff;
 }
 
+.carousel-content--wide {
+    max-width: 760px;
+}
+
 .carousel-content .eyebrow {
     color: rgba(244, 226, 170, 0.95);
 }
 
 .carousel-content h1 {
     margin: 0;
-    max-width: 10ch;
+    max-width: 12ch;
     font-family: 'Forum', serif;
-    font-size: clamp(2rem, 4vw, 3.75rem);
+    font-size: clamp(1.95rem, 3.8vw, 3.45rem);
+    line-height: 1.1;
+}
+
+.carousel-content--wide h1 {
+    max-width: 14ch;
+    font-size: clamp(1.75rem, 3.25vw, 3rem);
     line-height: 1.08;
 }
 
 .carousel-content p {
     max-width: 54ch;
-    margin: 16px 0 0;
+    margin: 14px 0 0;
     color: rgba(255, 255, 255, 0.88);
-    font-size: 0.94rem;
-    line-height: 1.58;
+    font-size: 0.92rem;
+    line-height: 1.52;
 }
 
 .carousel-dots {
@@ -436,7 +446,7 @@ a {
     padding: 28px;
     background:
         linear-gradient(180deg, rgba(45, 28, 70, 0.45), rgba(45, 28, 70, 0.78)),
-        url("explore.png") center/cover no-repeat;
+        url("../images/references/explore-layout-reference.png") center/cover no-repeat;
 }
 
 .explore-copy {
@@ -673,7 +683,9 @@ a {
 
 .highlights-gallery .highlight-card.is-center,
 .highlights-gallery .highlight-card.is-left,
-.highlights-gallery .highlight-card.is-right {
+.highlights-gallery .highlight-card.is-right,
+.highlights-gallery .highlight-card.is-left-secondary,
+.highlights-gallery .highlight-card.is-right-secondary {
     opacity: 1;
     pointer-events: auto;
 }
@@ -696,15 +708,27 @@ a {
     filter: saturate(0.82);
 }
 
+.highlights-gallery .highlight-card.is-left-secondary {
+    z-index: 1;
+    transform: translateX(calc(-50% - clamp(305px, 30vw, 390px))) translateY(44px) scale(0.68) rotateY(24deg);
+    filter: saturate(0.6);
+}
+
+.highlights-gallery .highlight-card.is-right-secondary {
+    z-index: 1;
+    transform: translateX(calc(-50% + clamp(305px, 30vw, 390px))) translateY(44px) scale(0.68) rotateY(-24deg);
+    filter: saturate(0.6);
+}
+
 .highlights-gallery .highlight-card.is-hidden-left {
     z-index: 1;
-    transform: translateX(calc(-50% - clamp(320px, 32vw, 420px))) translateY(44px) scale(0.68);
+    transform: translateX(calc(-50% - clamp(430px, 39vw, 540px))) translateY(54px) scale(0.54);
     opacity: 0;
 }
 
 .highlights-gallery .highlight-card.is-hidden-right {
     z-index: 1;
-    transform: translateX(calc(-50% + clamp(320px, 32vw, 420px))) translateY(44px) scale(0.68);
+    transform: translateX(calc(-50% + clamp(430px, 39vw, 540px))) translateY(54px) scale(0.54);
     opacity: 0;
 }
 
@@ -784,7 +808,7 @@ a {
 .hero-actions {
     display: flex;
     gap: 14px;
-    margin-top: 28px;
+    margin-top: 22px;
     flex-wrap: wrap;
 }
 
@@ -1038,6 +1062,14 @@ a {
         transform: translateX(calc(-50% + clamp(130px, 17vw, 180px))) translateY(26px) scale(0.82) rotateY(-14deg);
     }
 
+    .highlights-gallery .highlight-card.is-left-secondary {
+        transform: translateX(calc(-50% - clamp(220px, 24vw, 280px))) translateY(42px) scale(0.64) rotateY(18deg);
+    }
+
+    .highlights-gallery .highlight-card.is-right-secondary {
+        transform: translateX(calc(-50% + clamp(220px, 24vw, 280px))) translateY(42px) scale(0.64) rotateY(-18deg);
+    }
+
     .carousel-content h1,
     .page-hero h1 {
         max-width: none;
@@ -1120,8 +1152,8 @@ a {
         max-width: 620px;
         height: 100%;
         margin-left: 24px;
-        padding-top: 132px;
-        padding-bottom: 70px;
+        padding-top: 126px;
+        padding-bottom: 62px;
     }
 
     .carousel-arrow {
@@ -1138,7 +1170,17 @@ a {
     }
 
     .carousel-content h1 {
-        font-size: clamp(2rem, 6vw, 3.2rem);
+        font-size: clamp(1.8rem, 5.4vw, 2.95rem);
+    }
+
+    .carousel-content--wide h1 {
+        font-size: clamp(1.55rem, 4.6vw, 2.45rem);
+        max-width: 15ch;
+    }
+
+    .carousel-content p {
+        font-size: 0.88rem;
+        line-height: 1.48;
     }
 
     .highlights-gallery {
@@ -1174,6 +1216,8 @@ a {
     .highlights-gallery .highlight-card.is-center,
     .highlights-gallery .highlight-card.is-left,
     .highlights-gallery .highlight-card.is-right,
+    .highlights-gallery .highlight-card.is-left-secondary,
+    .highlights-gallery .highlight-card.is-right-secondary,
     .highlights-gallery .highlight-card.is-hidden-left,
     .highlights-gallery .highlight-card.is-hidden-right {
         opacity: 1;
@@ -1215,18 +1259,28 @@ a {
         height: 100%;
         width: calc(100% - 32px);
         margin-left: 16px;
-        padding-top: 124px;
-        padding-bottom: 66px;
+        padding-top: 116px;
+        padding-bottom: 54px;
     }
 
     .carousel-content h1 {
-        font-size: clamp(1.7rem, 7vw, 2.55rem);
-        line-height: 1.1;
+        font-size: clamp(1.55rem, 6.1vw, 2.2rem);
+        line-height: 1.08;
+        max-width: 13ch;
+    }
+
+    .carousel-content--wide h1 {
+        font-size: clamp(1.35rem, 5.2vw, 1.9rem);
+        max-width: 15ch;
     }
 
     .carousel-content p {
-        font-size: 0.88rem;
-        line-height: 1.5;
+        font-size: 0.83rem;
+        line-height: 1.42;
+    }
+
+    .hero-actions {
+        margin-top: 18px;
     }
 
     .carousel-arrow {

@@ -108,9 +108,19 @@ document.addEventListener('DOMContentLoaded', () => {
             activeHighlight = wrapIndex(index);
             const leftIndex = wrapIndex(activeHighlight - 1);
             const rightIndex = wrapIndex(activeHighlight + 1);
+            const leftSecondaryIndex = wrapIndex(activeHighlight - 2);
+            const rightSecondaryIndex = wrapIndex(activeHighlight + 2);
 
             highlightCards.forEach((card, cardIndex) => {
-                card.classList.remove('is-center', 'is-left', 'is-right', 'is-hidden-left', 'is-hidden-right');
+                card.classList.remove(
+                    'is-center',
+                    'is-left',
+                    'is-right',
+                    'is-left-secondary',
+                    'is-right-secondary',
+                    'is-hidden-left',
+                    'is-hidden-right'
+                );
                 card.tabIndex = -1;
 
                 if (cardIndex === activeHighlight) {
@@ -129,6 +139,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (cardIndex === rightIndex) {
                     card.classList.add('is-right');
+                    card.setAttribute('aria-hidden', 'false');
+                    card.tabIndex = 0;
+                    return;
+                }
+
+                if (cardIndex === leftSecondaryIndex) {
+                    card.classList.add('is-left-secondary');
+                    card.setAttribute('aria-hidden', 'false');
+                    card.tabIndex = 0;
+                    return;
+                }
+
+                if (cardIndex === rightSecondaryIndex) {
+                    card.classList.add('is-right-secondary');
                     card.setAttribute('aria-hidden', 'false');
                     card.tabIndex = 0;
                     return;
@@ -153,6 +177,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (card.classList.contains('is-right')) {
                     updateHighlights(activeHighlight + 1);
+                    return;
+                }
+
+                if (card.classList.contains('is-left-secondary')) {
+                    updateHighlights(activeHighlight - 2);
+                    return;
+                }
+
+                if (card.classList.contains('is-right-secondary')) {
+                    updateHighlights(activeHighlight + 2);
                 }
             });
 
