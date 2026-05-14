@@ -1399,6 +1399,34 @@ a {
     border: 1px solid rgba(143, 109, 229, 0.14);
 }
 
+.treasurer-chart {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+}
+
+.treasurer-chart h2 {
+    margin: 0;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+}
+
+.treasurer-chart__frame {
+    width: min(100%, 980px);
+    padding: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248, 239, 255, 0.94));
+    border: 1px solid rgba(143, 109, 229, 0.14);
+    box-shadow: var(--shadow);
+}
+
+.treasurer-chart__frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .eyebrow,
 .panel-label,
 .card-kicker,
