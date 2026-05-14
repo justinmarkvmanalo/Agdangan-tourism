@@ -1129,7 +1129,7 @@ a {
 }
 
 .office-shell {
-    min-height: 720px;
+    min-height: 0;
 }
 
 .office-return {
@@ -1187,10 +1187,10 @@ a {
 
 .office-about__copy h2 {
     margin: 0;
-    font-size: clamp(2.1rem, 4vw, 3.4rem);
-    line-height: 0.98;
+    font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+    line-height: 1.02;
     font-family: 'Forum', serif;
-    max-width: 12ch;
+    max-width: 14ch;
 }
 
 .office-about__copy p {
@@ -1253,6 +1253,15 @@ a {
 
 .permit-detail {
     padding-left: 24px;
+}
+
+.permit-detail__panel {
+    display: block;
+}
+
+.permit-detail__panel[hidden],
+.office-panel[hidden] {
+    display: none;
 }
 
 .permit-detail__panel h3,
