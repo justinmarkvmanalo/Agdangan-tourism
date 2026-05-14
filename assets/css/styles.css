@@ -445,8 +445,9 @@ a {
     gap: 26px;
     padding: 28px;
     background:
-        linear-gradient(180deg, rgba(45, 28, 70, 0.45), rgba(45, 28, 70, 0.78)),
-        url("../images/references/explore-layout-reference.png") center/cover no-repeat;
+        radial-gradient(circle at top left, rgba(244, 226, 170, 0.22), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(188, 160, 255, 0.18), transparent 24%),
+        linear-gradient(135deg, rgba(45, 28, 70, 0.92), rgba(73, 43, 106, 0.88));
 }
 
 .explore-copy {
