@@ -441,7 +441,7 @@ a {
 
 .explore-section {
     display: grid;
-    grid-template-columns: 0.78fr 1.22fr;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 26px;
     padding: 28px;
     background:
@@ -452,6 +452,7 @@ a {
 .explore-copy {
     color: #ffffff;
     padding: 20px;
+    min-width: 0;
 }
 
 .explore-copy .eyebrow {
@@ -460,10 +461,15 @@ a {
 
 .explore-copy h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
+    max-width: 12ch;
 }
 
 .explore-copy p {
     color: rgba(255, 255, 255, 0.88);
+    max-width: 34ch;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 .explore-panels {
@@ -471,6 +477,7 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
     align-items: stretch;
+    min-width: 0;
 }
 
 .explore-panel {
