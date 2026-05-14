@@ -210,4 +210,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateHighlights(activeHighlight);
     }
+
+    const tabGroups = document.querySelectorAll('[data-tabs], [data-subtabs]');
+
+    tabGroups.forEach((group) => {
+        const triggerAttribute = group.hasAttribute('data-subtabs')
+            ? 'data-subtab-trigger'
+            : 'data-tab-trigger';
+        const panelAttribute = group.hasAttribute('data-subtabs')
+            ? 'data-subtab-panel'
+            : 'data-tab-panel';
+        const triggers = Array.from(group.querySelectorAll(`[${triggerAttribute}]`));
+        const panels = Array.from(group.querySelectorAll(`[${panelAttribute}]`));
+
+        if (!triggers.length || !panels.length) {
+            return;
+        }
+
+        const setActiveTab = (target) => {
+            triggers.forEach((trigger) => {
+                const isActive = trigger.getAttribute(triggerAttribute) === target;
+                trigger.classList.toggle('is-active', isActive);
+                trigger.setAttribute('aria-selected', String(isActive));
+            });
+
+            panels.forEach((panel) => {
+                const isActive = panel.getAttribute(panelAttribute) === target;
+                panel.classList.toggle('is-active', isActive);
+                panel.hidden = !isActive;
+            });
+        };
+
+        triggers.forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+                const target = trigger.getAttribute(triggerAttribute);
+
+                if (!target) {
+                    return;
+                }
+
+                setActiveTab(target);
+            });
+        });
+    });
 });

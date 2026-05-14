@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Municipality of Agdangan</title>
+    <title>Business Permits and Licensing Office | Municipality of Agdangan</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <div class="utility-bar">
         <div class="utility-bar__inner">
             <form class="utility-search" data-search-form>
-                <input type="search" name="query" placeholder="Search public services" aria-label="Search public services">
+                <input type="search" name="query" placeholder="Search permits, requirements, updates" aria-label="Search permits and requirements">
             </form>
             <div class="utility-meta">
                 <span class="utility-meta__item">
@@ -53,74 +53,197 @@
         </div>
     </header>
 
-    <main class="page-main">
-        <section class="page-hero">
-            <span class="eyebrow">Public Services</span>
-            <h1>Frontline transactions organized by office and purpose.</h1>
-            <p>Browse common transactions and service channels arranged for easier use by residents, business owners, and partner agencies.</p>
-        </section>
-
-        <section class="section section--tight">
-            <div class="service-grid">
-                <article class="service-card">
-                    <span class="card-kicker">Business Desk</span>
-                    <h2>Permits and renewals</h2>
-                    <p>Business permit processing, documentary requirements, and payment coordination.</p>
-                    <a href="dashboard.html">Ask the office</a>
-                </article>
-                <article class="service-card">
-                    <span class="card-kicker">Civil Support</span>
-                    <h2>Certification requests</h2>
-                    <p>Referral information for certificates, local endorsements, and records assistance.</p>
-                    <a href="dashboard.html">Check contacts</a>
-                </article>
-                <article class="service-card">
-                    <span class="card-kicker">Health Office</span>
-                    <h2>Consultation and public health</h2>
-                    <p>Advisories, clinic schedules, and health campaign support for the community.</p>
-                    <a href="dashboard.html">View schedules</a>
-                </article>
-                <article class="service-card">
-                    <span class="card-kicker">Social Welfare</span>
-                    <h2>Community assistance</h2>
-                    <p>Program orientation, referral channels, and support information for households in need.</p>
-                    <a href="dashboard.html">Reach support</a>
-                </article>
-                <article class="service-card">
-                    <span class="card-kicker">Engineering</span>
-                    <h2>Infrastructure concerns</h2>
-                    <p>Project status references, maintenance coordination, and local infrastructure concerns.</p>
-                    <a href="dashboard.html">Submit inquiry</a>
-                </article>
-                <article class="service-card">
-                    <span class="card-kicker">Agriculture</span>
-                    <h2>Farmer and fisheries support</h2>
-                    <p>Advisory services, livelihood coordination, and production-related local assistance.</p>
-                    <a href="dashboard.html">See updates</a>
-                </article>
+    <main class="page-main page-main--office">
+        <section class="office-hero">
+            <div class="office-hero__inner">
+                <span class="office-hero__line"></span>
+                <h1>Business Permits and Licensing Office</h1>
+                <span class="office-hero__line"></span>
             </div>
         </section>
 
-        <section class="section section--accent">
-            <div class="feature-layout">
-                <div>
-                    <span class="eyebrow">Service Notes</span>
-                    <h2>Each category can connect to requirements, forms, or office-specific workflows.</h2>
-                    <p>Use this page as the public entry point for municipal transactions, service guidelines, and downloadable resources.</p>
-                </div>
-                <div class="bullet-panel">
-                    <div class="bullet-row">
-                        <strong>Better fit</strong>
-                        <span>Aligned to local government information needs</span>
+        <section class="section section--office-body">
+            <div class="office-shell">
+                <a class="office-return" href="index.html">&laquo; Return</a>
+
+                <div class="office-tabs" data-tabs>
+                    <div class="office-tablist" role="tablist" aria-label="Business permits sections">
+                        <button class="office-tab is-active" type="button" role="tab" aria-selected="true" data-tab-trigger="about-us">About Us</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="services">Services</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="programs">Programs</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="latest-updates">Latest Updates</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="contact-us">Contact Us</button>
                     </div>
-                    <div class="bullet-row">
-                        <strong>Next step</strong>
-                        <span>Link each card to actual forms or downloadable requirements</span>
-                    </div>
-                    <div class="bullet-row">
-                        <strong>Search</strong>
-                        <span>Header search can later connect to a real site index</span>
-                    </div>
+
+                    <section class="office-panel is-active" role="tabpanel" data-tab-panel="about-us">
+                        <div class="office-about">
+                            <div class="office-about__copy">
+                                <span class="eyebrow">About the Office</span>
+                                <h2>Supporting business registration, renewal, and compliance in Agdangan.</h2>
+                                <p>The Business Permits and Licensing Office serves entrepreneurs, store owners, transport operators, and local enterprises by guiding permit processing, renewal requirements, and coordination with regulatory clearances.</p>
+                                <p>This page improves the original reference by organizing the office information into a clearer permit guide with dedicated service, program, update, and contact sections.</p>
+                            </div>
+                            <div class="office-about__stats">
+                                <div class="office-stat">
+                                    <strong>5</strong>
+                                    <span>Core permit workflows</span>
+                                </div>
+                                <div class="office-stat">
+                                    <strong>1</strong>
+                                    <span>Frontline business desk</span>
+                                </div>
+                                <div class="office-stat">
+                                    <strong>Office</strong>
+                                    <span>BPLO Agdangan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="office-panel" role="tabpanel" data-tab-panel="services" hidden>
+                        <div class="permit-layout" data-subtabs>
+                            <aside class="permit-menu" role="tablist" aria-label="Business permit services">
+                                <button class="permit-link is-active" type="button" role="tab" aria-selected="true" data-subtab-trigger="new-business-registration">New Business Registration</button>
+                                <button class="permit-link" type="button" role="tab" aria-selected="false" data-subtab-trigger="business-permit-renewal">Business Permit Renewal</button>
+                                <button class="permit-link" type="button" role="tab" aria-selected="false" data-subtab-trigger="amendment-update">Amendment/Update of Business Information</button>
+                                <button class="permit-link" type="button" role="tab" aria-selected="false" data-subtab-trigger="retirement-closure">Retirement/Closure of Business</button>
+                                <button class="permit-link" type="button" role="tab" aria-selected="false" data-subtab-trigger="motorized-tricycle">Motorized Tricycle Operator's Permit</button>
+                            </aside>
+
+                            <div class="permit-detail">
+                                <article class="permit-detail__panel is-active" role="tabpanel" data-subtab-panel="new-business-registration">
+                                    <h3>New Business Registration</h3>
+                                    <h4>Requirements</h4>
+                                    <ul>
+                                        <li>New Community Tax Certificate (Cedula) of the present year</li>
+                                        <li>New Barangay Clearance for Business</li>
+                                        <li>SSS ID and SSS Clearance (w/receipt of the present year)</li>
+                                        <li>CDA Certificate (For Cooperative only)</li>
+                                        <li>DTI Registration (For Single Ownership only)</li>
+                                        <li>SEC Registration (For Corporation only)</li>
+                                        <li>PAG-IBIG Registration</li>
+                                        <li>Phil-Health Registration ID (w/receipt of the present year)</li>
+                                        <li>Installation of CCTV (for businesses with capital of P50,000.00 and above)</li>
+                                    </ul>
+                                    <h4>Clearances</h4>
+                                    <ul>
+                                        <li>Clearance at Bureau of Fire</li>
+                                        <li>Clearance at Engineering Office</li>
+                                        <li>Clearance at MPDC Office</li>
+                                        <li>Clearance at Assessor Office</li>
+                                        <li>Clearance at MENRO</li>
+                                        <li>New Sanitary Permit (Health Center)</li>
+                                    </ul>
+                                </article>
+
+                                <article class="permit-detail__panel" role="tabpanel" data-subtab-panel="business-permit-renewal" hidden>
+                                    <h3>Business Permit Renewal</h3>
+                                    <h4>Requirements</h4>
+                                    <ul>
+                                        <li>Accomplished Renewal Application Form</li>
+                                        <li>Previous Year's Business Permit</li>
+                                        <li>Community Tax Certificate (CTC)</li>
+                                        <li>Barangay Clearance</li>
+                                        <li>Latest Financial Statement</li>
+                                    </ul>
+                                </article>
+
+                                <article class="permit-detail__panel" role="tabpanel" data-subtab-panel="amendment-update" hidden>
+                                    <h3>Amendment / Update of Business Information</h3>
+                                    <p>(Change of business name, address, ownership, nature of business, etc.)</p>
+                                    <h4>Requirements</h4>
+                                    <ul>
+                                        <li>Letter of Request</li>
+                                        <li>Supporting documents (DTI/SEC/CDA, Lease Contract, etc.)</li>
+                                        <li>Current Business Permit</li>
+                                    </ul>
+                                </article>
+
+                                <article class="permit-detail__panel" role="tabpanel" data-subtab-panel="retirement-closure" hidden>
+                                    <h3>Retirement / Closure of Business</h3>
+                                    <h4>Requirements</h4>
+                                    <ul>
+                                        <li>Letter of Intent to Close</li>
+                                        <li>Latest Business Permit</li>
+                                        <li>Payment of Business Tax</li>
+                                    </ul>
+                                </article>
+
+                                <article class="permit-detail__panel" role="tabpanel" data-subtab-panel="motorized-tricycle" hidden>
+                                    <h3>Motorized Tricycle Operator's Permit</h3>
+                                    <h4>Requirements</h4>
+                                    <ul>
+                                        <li>OR/CR</li>
+                                        <li>Driver's License</li>
+                                        <li>Cedula</li>
+                                        <li>Barangay Clearance</li>
+                                        <li>Certification of membership issued by the President of TODA</li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="office-panel" role="tabpanel" data-tab-panel="programs" hidden>
+                        <div class="office-programs">
+                            <article class="program-card">
+                                <strong>1. Business One-Stop Shop (BOSS)</strong>
+                                <p>Pinagsama-samang serbisyo para sa mabilis na pagproseso ng Business Permit.</p>
+                            </article>
+                            <article class="program-card">
+                                <strong>2. Joint Inspection Team (JIT) Program</strong>
+                                <p>Inspeksyon ng mga establisyimento kasama ang iba't ibang regulatory offices upang masiguro ang pagsunod sa mga batas at ordinansa.</p>
+                            </article>
+                            <article class="program-card">
+                                <strong>3. Tax Campaign</strong>
+                                <p>Pagtulong sa mga bagong negosyante at MSMEs sa permit orientation, renewal reminders, and compliance awareness.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="office-panel" role="tabpanel" data-tab-panel="latest-updates" hidden>
+                        <div class="office-updates">
+                            <article class="update-card">
+                                <img src="assets/images/hero/community-assembly.webp" alt="Business one-stop shop event">
+                                <div class="update-card__body">
+                                    <h3>Business One-Stop Shop (BOSS) 2026</h3>
+                                    <p>Written on March 4, 2026</p>
+                                    <a href="dashboard.html">Read more</a>
+                                </div>
+                            </article>
+                            <article class="update-card">
+                                <img src="assets/images/hero/mayor-office-meeting.webp" alt="Joint inspection team program">
+                                <div class="update-card__body">
+                                    <h3>Joint Inspection Team (JIT) Program</h3>
+                                    <p>Written on March 4, 2026</p>
+                                    <a href="dashboard.html">Read more</a>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="office-panel" role="tabpanel" data-tab-panel="contact-us" hidden>
+                        <div class="office-contact">
+                            <div class="office-contact__table">
+                                <div class="office-contact__row office-contact__row--head">
+                                    <span>Offices</span>
+                                    <span>Office Head</span>
+                                    <span>Telephone No.</span>
+                                    <span>E-mail Address</span>
+                                </div>
+                                <div class="office-contact__row">
+                                    <span>Business Permit and Licensing Office</span>
+                                    <span>Mark Paolo T. Abalos</span>
+                                    <span>0970-844-0847</span>
+                                    <span>markabalos8@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="office-contact__note">
+                                <strong>Office Hours</strong>
+                                <span>Monday to Friday, 8:00 AM to 5:00 PM</span>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </section>
