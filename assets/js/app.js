@@ -81,4 +81,99 @@ document.addEventListener('DOMContentLoaded', () => {
             restartAutoplay();
         });
     }
+
+    const highlightsGallery = document.querySelector('[data-highlights-gallery]');
+    const highlightCards = highlightsGallery
+        ? Array.from(highlightsGallery.querySelectorAll('[data-highlight-card]'))
+        : [];
+    const highlightsPrev = highlightsGallery?.querySelector('[data-highlights-prev]');
+    const highlightsNext = highlightsGallery?.querySelector('[data-highlights-next]');
+
+    if (highlightsGallery && highlightCards.length > 2) {
+        let activeHighlight = 1;
+
+        const wrapIndex = (index) => {
+            if (index < 0) {
+                return highlightCards.length - 1;
+            }
+
+            if (index >= highlightCards.length) {
+                return 0;
+            }
+
+            return index;
+        };
+
+        const updateHighlights = (index) => {
+            activeHighlight = wrapIndex(index);
+            const leftIndex = wrapIndex(activeHighlight - 1);
+            const rightIndex = wrapIndex(activeHighlight + 1);
+
+            highlightCards.forEach((card, cardIndex) => {
+                card.classList.remove('is-center', 'is-left', 'is-right', 'is-hidden-left', 'is-hidden-right');
+                card.tabIndex = -1;
+
+                if (cardIndex === activeHighlight) {
+                    card.classList.add('is-center');
+                    card.setAttribute('aria-hidden', 'false');
+                    card.tabIndex = 0;
+                    return;
+                }
+
+                if (cardIndex === leftIndex) {
+                    card.classList.add('is-left');
+                    card.setAttribute('aria-hidden', 'false');
+                    card.tabIndex = 0;
+                    return;
+                }
+
+                if (cardIndex === rightIndex) {
+                    card.classList.add('is-right');
+                    card.setAttribute('aria-hidden', 'false');
+                    card.tabIndex = 0;
+                    return;
+                }
+
+                const distanceGoingLeft = (activeHighlight - cardIndex + highlightCards.length) % highlightCards.length;
+                const hiddenClass = distanceGoingLeft < highlightCards.length / 2
+                    ? 'is-hidden-left'
+                    : 'is-hidden-right';
+
+                card.classList.add(hiddenClass);
+                card.setAttribute('aria-hidden', 'true');
+            });
+        };
+
+        highlightCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                if (card.classList.contains('is-left')) {
+                    updateHighlights(activeHighlight - 1);
+                    return;
+                }
+
+                if (card.classList.contains('is-right')) {
+                    updateHighlights(activeHighlight + 1);
+                }
+            });
+
+            card.addEventListener('keydown', (event) => {
+                if (event.key !== 'Enter' && event.key !== ' ') {
+                    return;
+                }
+
+                event.preventDefault();
+                card.click();
+            });
+        });
+
+        highlightsPrev?.addEventListener('click', () => {
+            updateHighlights(activeHighlight - 1);
+        });
+
+        highlightsNext?.addEventListener('click', () => {
+            updateHighlights(activeHighlight + 1);
+        });
+
+        updateHighlights(activeHighlight);
+    }
 });
