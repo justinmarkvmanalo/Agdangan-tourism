@@ -613,14 +613,14 @@ a {
 .section--highlights {
     background:
         linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0)),
-        linear-gradient(90deg, #1591bc 0%, #49a5d7 54%, #8ab6f1 100%);
+        linear-gradient(90deg, #a77be0 0%, #c9a4f4 52%, #eed79f 100%);
 }
 
 .section-heading--centered {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    color: #173149;
+    color: #3f2c5d;
 }
 
 .section--highlights .section-heading {
@@ -628,7 +628,7 @@ a {
 }
 
 .section--highlights .eyebrow {
-    color: rgba(23, 49, 73, 0.72);
+    color: rgba(63, 44, 93, 0.72);
     margin-bottom: 10px;
 }
 
@@ -640,7 +640,7 @@ a {
     display: inline-block;
     margin-top: 10px;
     font-size: 0.8rem;
-    color: rgba(23, 49, 73, 0.8);
+    color: rgba(63, 44, 93, 0.8);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -734,7 +734,7 @@ a {
 .highlights-gallery .highlight-card.is-center {
     z-index: 3;
     transform: translateX(-50%) translateY(0) scale(1);
-    box-shadow: 0 24px 44px rgba(14, 51, 84, 0.22);
+    box-shadow: 0 24px 44px rgba(58, 35, 90, 0.24);
 }
 
 .highlights-gallery .highlight-card.is-left {
@@ -807,7 +807,7 @@ a {
 }
 
 .section--civic-links {
-    background: linear-gradient(90deg, #6498c1 0%, #4d86ad 48%, #5d8fb4 100%);
+    background: linear-gradient(90deg, #9d7cdc 0%, #b996ef 48%, #dec28d 100%);
     padding-top: 18px;
     padding-bottom: 28px;
 }
@@ -854,8 +854,8 @@ a {
     place-items: center;
     background:
         radial-gradient(circle at top center, rgba(255, 255, 255, 0.74), transparent 36%),
-        linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
-    color: #28456a;
+        linear-gradient(180deg, #fffdfd 0%, #f7f0ff 100%);
+    color: #5a3f80;
     text-align: center;
 }
 
@@ -879,23 +879,23 @@ a {
     font-size: 2rem;
     line-height: 0.98;
     text-transform: uppercase;
-    color: #27466f;
+    color: #6d4f9d;
 }
 
 .civic-card__inner p {
     margin: 16px 0 0;
     font-size: 0.92rem;
     line-height: 1.55;
-    color: #4b627f;
+    color: #7a6997;
 }
 
 .section--contact-facts {
     padding-top: 0;
-    background: linear-gradient(180deg, #70bfac 0%, #a8f0c2 100%);
+    background: linear-gradient(180deg, #d9c0f8 0%, #f0dbab 100%);
 }
 
 .section--history {
-    background: linear-gradient(180deg, #6ea8d7 0%, #8ebae6 100%);
+    background: linear-gradient(180deg, #b998ea 0%, #e5c98f 100%);
 }
 
 .history-feature {
@@ -939,7 +939,7 @@ a {
 
 .button--light {
     background: #ffffff;
-    color: #35506a;
+    color: #684b94;
 }
 
 .history-visual {
@@ -995,7 +995,7 @@ a {
     gap: 28px 36px;
     align-content: center;
     padding: 44px 52px;
-    color: #223a4b;
+    color: #4d356c;
 }
 
 .contact-facts__column h3,
@@ -1014,13 +1014,13 @@ a {
 .contact-facts__hours {
     margin: 14px 0 0;
     line-height: 1.6;
-    color: rgba(34, 58, 75, 0.9);
+    color: rgba(77, 53, 108, 0.9);
 }
 
 .contact-facts__column a {
     display: inline-block;
     margin-top: 18px;
-    color: #23496a;
+    color: #7b5aaa;
     font-weight: 500;
 }
 
@@ -1045,7 +1045,7 @@ a {
 
 .facts-heading__eyebrow {
     display: inline-block;
-    color: #ff612e;
+    color: #b7792b;
     text-transform: uppercase;
     font-size: 0.78rem;
     font-weight: 800;
@@ -1056,7 +1056,7 @@ a {
 .facts-heading h2 {
     font-size: clamp(2rem, 3.5vw, 3.2rem);
     line-height: 1;
-    color: #2f3f53;
+    color: #4c356c;
     max-width: 8ch;
 }
 
@@ -1068,7 +1068,7 @@ a {
 
 .fact-card {
     text-align: center;
-    color: #2d4058;
+    color: #553b7c;
 }
 
 .fact-card strong {
@@ -1080,7 +1080,7 @@ a {
 .fact-card span {
     display: block;
     margin-top: 12px;
-    color: #2e8bf2;
+    color: #a16d25;
     font-size: 0.88rem;
     line-height: 1.45;
 }
