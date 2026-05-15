@@ -68,12 +68,12 @@
 
                 <div class="office-tabs" data-tabs>
                     <div class="office-tablist" role="tablist" aria-label="Municipal treasurer sections">
-                        <button class="office-tab is-active" type="button" role="tab" aria-selected="true" data-tab-trigger="about-us">About Us</button>
-                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="services">Services</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="about-us">About Us</button>
+                        <button class="office-tab is-active" type="button" role="tab" aria-selected="true" data-tab-trigger="services">Services</button>
                         <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="contact-us">Contact Us</button>
                     </div>
 
-                    <section class="office-panel is-active" role="tabpanel" data-tab-panel="about-us">
+                    <section class="office-panel" role="tabpanel" data-tab-panel="about-us" hidden>
                         <div class="treasurer-chart">
                             <h2>Organizational Chart</h2>
                             <div class="treasurer-chart__frame">
@@ -82,7 +82,7 @@
                         </div>
                     </section>
 
-                    <section class="office-panel" role="tabpanel" data-tab-panel="services" hidden>
+                    <section class="office-panel is-active" role="tabpanel" data-tab-panel="services">
                         <div class="permit-layout" data-subtabs>
                             <aside class="permit-menu" role="tablist" aria-label="Treasurer services">
                                 <button class="permit-link is-active" type="button" role="tab" aria-selected="true" data-subtab-trigger="real-property-tax">Collection of Real Property Tax</button>

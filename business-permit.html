@@ -68,14 +68,14 @@
 
                 <div class="office-tabs" data-tabs>
                     <div class="office-tablist" role="tablist" aria-label="Business permits sections">
-                        <button class="office-tab is-active" type="button" role="tab" aria-selected="true" data-tab-trigger="about-us">About Us</button>
-                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="services">Services</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="about-us">About Us</button>
+                        <button class="office-tab is-active" type="button" role="tab" aria-selected="true" data-tab-trigger="services">Services</button>
                         <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="programs">Programs</button>
                         <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="latest-updates">Latest Updates</button>
                         <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="contact-us">Contact Us</button>
                     </div>
 
-                    <section class="office-panel is-active" role="tabpanel" data-tab-panel="about-us">
+                    <section class="office-panel" role="tabpanel" data-tab-panel="about-us" hidden>
                         <div class="office-about">
                             <div class="office-about__copy">
                                 <span class="eyebrow">About the Office</span>
@@ -86,7 +86,7 @@
                         </div>
                     </section>
 
-                    <section class="office-panel" role="tabpanel" data-tab-panel="services" hidden>
+                    <section class="office-panel is-active" role="tabpanel" data-tab-panel="services">
                         <div class="permit-layout" data-subtabs>
                             <aside class="permit-menu" role="tablist" aria-label="Business permit services">
                                 <button class="permit-link is-active" type="button" role="tab" aria-selected="true" data-subtab-trigger="new-business-registration">New Business Registration</button>
