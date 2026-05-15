@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('[data-nav-toggle]');
     const siteNav = document.querySelector('[data-site-nav]');
+    const siteHeaderInner = document.querySelector('.site-header__inner');
     const yearTarget = document.querySelector('[data-current-year]');
     const searchForms = document.querySelectorAll('[data-search-form]');
+    const root = document.documentElement;
 
     if (yearTarget) {
         yearTarget.textContent = new Date().getFullYear();
@@ -13,6 +15,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const isOpen = siteNav.classList.toggle('is-open');
             navToggle.setAttribute('aria-expanded', String(isOpen));
         });
+    }
+
+    if (navToggle && siteNav && siteHeaderInner) {
+        const syncResponsiveNav = () => {
+            root.classList.remove('nav-collapse');
+            siteNav.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+
+            const headerWidth = siteHeaderInner.clientWidth;
+            const toggleReserve = navToggle.offsetWidth || 48;
+            const navFitsInline = siteHeaderInner.scrollWidth <= headerWidth;
+
+            if (!navFitsInline || window.innerWidth <= 960) {
+                root.classList.add('nav-collapse');
+            }
+
+            if (root.classList.contains('nav-collapse')) {
+                const collapsedOverflow = siteHeaderInner.scrollWidth > headerWidth + toggleReserve;
+
+                if (collapsedOverflow) {
+                    root.classList.add('nav-collapse');
+                }
+            }
+        };
+
+        syncResponsiveNav();
+        window.addEventListener('resize', syncResponsiveNav);
     }
 
     searchForms.forEach((form) => {
