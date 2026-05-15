@@ -1287,6 +1287,122 @@ a {
     letter-spacing: 0.06em;
 }
 
+.downloadables-list {
+    display: grid;
+    gap: 0;
+}
+
+.downloadables-item {
+    border-bottom: 1px solid rgba(23, 37, 84, 0.12);
+}
+
+.downloadables-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 1.18rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.downloadables-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.downloadables-item summary::after {
+    content: "+";
+    font-size: 1.4rem;
+    color: var(--ink-soft);
+}
+
+.downloadables-item[open] summary::after {
+    content: "-";
+}
+
+.downloadables-item__body {
+    padding: 0 0 20px;
+    color: var(--ink-soft);
+}
+
+.download-file-list {
+    display: grid;
+    gap: 10px;
+}
+
+.download-file-card {
+    border: 1px solid rgba(59, 130, 246, 0.22);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #fff;
+}
+
+.download-file-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.download-file-card__meta h3 {
+    margin: 0 0 4px;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink);
+}
+
+.download-file-card__meta p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+}
+
+.download-file-card__icon {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 44px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.download-file-card__icon--pdf {
+    background: #e0565b;
+}
+
+.download-file-card__icon--doc {
+    background: #3b82f6;
+}
+
+.download-file-card__button {
+    flex: 0 0 auto;
+    padding: 9px 16px;
+    border-radius: 6px;
+    background: #5c8df6;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.download-file-card__button:hover {
+    background: #4679e8;
+}
+
 .permit-detail__panel h4 {
     margin: 16px 0 8px;
     font-size: 0.92rem;
