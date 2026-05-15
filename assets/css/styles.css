@@ -1193,6 +1193,17 @@ a {
     max-width: 14ch;
 }
 
+.office-about__media {
+    margin: 0 0 24px;
+}
+
+.office-about__media img {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(143, 109, 229, 0.16);
+    box-shadow: var(--shadow);
+}
+
 .office-about__copy p {
     max-width: 58ch;
     line-height: 1.72;
