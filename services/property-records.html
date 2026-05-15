@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office of the Municipal Assessor | Municipality of Agdangan</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
     <div class="utility-bar">
@@ -25,15 +25,15 @@
                     </span>
                     <span>mgoagdangan@gmail.com</span>
                 </span>
-                <a class="utility-cta" href="dashboard.html">Contact Us</a>
+                <a class="utility-cta" href="../dashboard.html">Contact Us</a>
             </div>
         </div>
     </div>
 
     <header class="site-header">
         <div class="site-header__inner">
-            <a class="brand" href="index.html" aria-label="Municipality of Agdangan home">
-                <img class="brand__banner" src="assets/images/branding/municipality-banner.webp" alt="Municipality of Agdangan banner">
+            <a class="brand" href="../index.html" aria-label="Municipality of Agdangan home">
+                <img class="brand__banner" src="../assets/images/branding/municipality-banner.webp" alt="Municipality of Agdangan banner">
             </a>
 
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
@@ -43,12 +43,24 @@
             </button>
 
             <nav class="site-nav" id="site-nav" data-site-nav>
-                <a href="index.html">Home</a>
-                <a href="booking.html">About Us</a>
-                <a href="booking.html">Government</a>
-                <a class="is-active" href="property-records.html">Services</a>
-                <a href="dashboard.html">News &amp; Updates</a>
-                <a href="dashboard.html">Contact</a>
+                <a href="../index.html">Home</a>
+                <a href="../booking.html">About Us</a>
+                <a href="../booking.html">Government</a>
+                <div class="site-nav__dropdown is-active">
+                    <a class="is-active" href="business-permit.html">Services</a>
+                    <div class="site-nav__menu">
+                        <a href="business-permit.html">Business Permit</a>
+                        <a href="taxes.html">Pay Taxes</a>
+                        <a href="property-records.html">Property Records</a>
+                        <a href="voter-services.html">Voter Services</a>
+                        <a href="youth-programs.html">Youth Programs</a>
+                        <a href="downloadable-forms.html">Downloadable Forms</a>
+                        <a href="municipal-agriculturist.html">Office of the Municipal Agriculturist</a>
+                        <a href="municipal-social-welfare-development.html">Office of the Municipal Social Welfare and Development</a>
+                    </div>
+                </div>
+                <a href="../dashboard.html">News &amp; Updates</a>
+                <a href="../dashboard.html">Contact</a>
             </nav>
         </div>
     </header>
@@ -64,7 +76,7 @@
 
         <section class="section section--office-body">
             <div class="office-shell">
-                <a class="office-return" href="index.html">&laquo; Return</a>
+                <a class="office-return" href="../index.html">&laquo; Return</a>
 
                 <div class="office-tabs" data-tabs>
                     <div class="office-tablist" role="tablist" aria-label="Assessor office sections">
@@ -78,7 +90,7 @@
                             <div class="office-about__copy">
                                 <span class="eyebrow">About the Office</span>
                                 <div class="treasurer-chart__frame office-about__media">
-                                    <img src="assets/images/offices/assessor.webp" alt="Office of the Municipal Assessor organizational chart">
+                                    <img src="../assets/images/offices/assessor.webp" alt="Office of the Municipal Assessor organizational chart">
                                 </div>
                                 <h2>Property appraisal, tax declaration processing, and records services for the municipality.</h2>
                                 <p>The Office of the Municipal Assessor oversees real property appraisal and assessment, maintains property records, and supports tax mapping and valuation functions for Agdangan.</p>
@@ -386,9 +398,9 @@
             </div>
             <div>
                 <h3>Sections</h3>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="booking.html">About Us</a></p>
-                <p><a href="dashboard.html">News &amp; Contact</a></p>
+                <p><a href="../index.html">Home</a></p>
+                <p><a href="../booking.html">About Us</a></p>
+                <p><a href="../dashboard.html">News &amp; Contact</a></p>
             </div>
             <div>
                 <h3>Reach the Office</h3>
@@ -400,6 +412,6 @@
         <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
     </footer>
 
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/app.js"></script>
 </body>
 </html>
