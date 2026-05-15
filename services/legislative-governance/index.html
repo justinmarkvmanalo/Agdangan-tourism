@@ -77,6 +77,26 @@
         <section class="section section--office-body">
             <div class="office-shell">
                 <a class="office-return" href="/">&laquo; Return</a>
+                <div class="office-tabs" data-tabs>
+                    <div class="office-tablist" role="tablist" aria-label="Legislative and governance sections">
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="about-us">About Us</button>
+                        <button class="office-tab is-active" type="button" role="tab" aria-selected="true" data-tab-trigger="services">Services</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="contact-us">Contact Us</button>
+                        <button class="office-tab" type="button" role="tab" aria-selected="false" data-tab-trigger="latest-updates">Latest Updates</button>
+                    </div>
+                    <section class="office-panel" role="tabpanel" data-tab-panel="about-us" hidden>
+                        <div class="office-contact"><div class="office-contact__note"><strong>About Us</strong><span>No content available.</span></div></div>
+                    </section>
+                    <section class="office-panel is-active" role="tabpanel" data-tab-panel="services">
+                        <div class="office-contact"><div class="office-contact__note"><strong>Services</strong><span>No content available.</span></div></div>
+                    </section>
+                    <section class="office-panel" role="tabpanel" data-tab-panel="contact-us" hidden>
+                        <div class="office-contact"><div class="office-contact__note"><strong>Contact Us</strong><span>No content available.</span></div></div>
+                    </section>
+                    <section class="office-panel" role="tabpanel" data-tab-panel="latest-updates" hidden>
+                        <div class="office-contact"><div class="office-contact__note"><strong>Latest Updates</strong><span>No content available.</span></div></div>
+                    </section>
+                </div>
             </div>
         </section>
     </main>
@@ -89,7 +109,7 @@
             <div>
                 <h3>Sections</h3>
                 <p><a href="/">Home</a></p>
-                <p><a href="/booking">About Us</a></p>
+                <p><a href="/about-us">About Us</a></p>
                 <p><a href="/dashboard">News &amp; Contact</a></p>
             </div>
             <div>
