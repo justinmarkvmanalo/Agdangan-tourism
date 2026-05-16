@@ -7,13 +7,117 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    <main class="page-main">
-        <section class="page-hero">
-            <span class="eyebrow">About Us</span>
-            <h1>History</h1>
-            <p></p>
+    <div class="utility-bar">
+        <div class="utility-bar__inner">
+            <form class="utility-search" data-search-form>
+                <input type="search" name="query" placeholder="Search history of Agdangan" aria-label="Search history of Agdangan">
+            </form>
+            <div class="utility-meta">
+                <span class="utility-meta__item"><span>(042) 421 5551</span></span>
+                <span class="utility-meta__item"><span>mgoagdangan@gmail.com</span></span>
+                <a class="utility-cta" href="/dashboard">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="/" aria-label="Municipality of Agdangan home">
+                <img class="brand__banner" src="/assets/images/branding/municipality-banner.webp" alt="Municipality of Agdangan banner">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" data-site-nav>
+                <a href="/">Home</a>
+                <div class="site-nav__dropdown is-active">
+                    <a class="is-active" href="/about-us">About Us</a>
+                    <div class="site-nav__menu">
+                        <a href="/about-us/mission-and-vision">Mission and Vision</a>
+                        <a href="/about-us/core-values">Core Values</a>
+                        <a href="/about-us/history">History</a>
+                        <a href="/about-us/municipal-profile">Municipal Profile</a>
+                        <a href="/about-us/past-mayors">Past Mayors</a>
+                        <a href="/about-us/past-vice-mayors">Past Vice-Mayors</a>
+                    </div>
+                </div>
+                <a href="/booking">Government</a>
+                <div class="site-nav__dropdown">
+                    <a href="/services/business-permit">Services</a>
+                    <div class="site-nav__menu">
+                        <a href="/services/accounting-services">Accounting Services</a>
+                        <a href="/services/business-permit">Business Licensing</a>
+                        <a href="/services/taxes">Treasury and Payments</a>
+                        <a href="/services/property-records">Property Services</a>
+                        <a href="/services/municipal-agriculturist">Agriculture Services</a>
+                        <a href="/services/health-services">Health Services</a>
+                        <a href="/services/tourism-services">Tourism Services</a>
+                        <a href="/services/youth-programs">Youth Development</a>
+                        <a href="/services/environmental-services">Environmental Services</a>
+                        <a href="/services/fire-emergency-services">Fire &amp; Emergency Services</a>
+                        <a href="/services/voter-services">Election Services</a>
+                        <a href="/services/legislative-governance">Legislative &amp; Governance</a>
+                        <a href="/services/additional-services">Additional Services</a>
+                    </div>
+                </div>
+                <a href="/dashboard">News &amp; Updates</a>
+                <a href="/dashboard">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main page-main--history-story">
+        <section class="history-story-shell">
+            <div class="history-story-heading">
+                <span class="eyebrow">About Us</span>
+                <h1>History of <span>Agdangan</span></h1>
+            </div>
+
+            <div class="history-story-feature">
+                <div class="history-story-feature__media">
+                    <img src="/assets/images/highlights/old-agdangan.jpg" alt="Historic community gathering in Agdangan">
+                </div>
+                <div class="history-story-feature__copy">
+                    <p>In the early days, when the town of Atimonan was frequently raided by Muslim Pirates and the Katipunan were fighting the Spaniards, two cabezas of Barangay in Atimonan decided to look for a place where they could settle peacefully. The two were Mariano Aguilar and Juan Salvador.</p>
+                    <p>They traversed the then forested area and followed a river, downstream flow which ended to a placid bay which with white sand and all its glory. There they could see the island of Marinduque and Mindoro on a clear day. The sea was naturally endowed with beauty, wild palms, verdant hills, and clear blue water. At low tide, the beach spread far and the shore abounds with clams, shrimps, crabs, fishes, and other edible resources.</p>
+                </div>
+            </div>
+
+            <div class="history-story-body">
+                <p>The two cabezas and their families settled near the river and they started to clear the nearby forest so they can plant rice, corn, bananas, and other crops. They constructed temporary shanties and they invited their relatives in Atimonan to join them. There, they were free from Muslim Pirates and they can avoid the cruelty of Spaniards.</p>
+                <p>When the civil government was founded by the Americans, the settlers coordinated with then officials of Unisan, and the place become a part of the Principalia of Unisan.</p>
+                <p>The number of settlers grows and they named the place "Agrupasyon ng Agdangan". After the flow of the river on a stare-like bed, they also named the river Agdangan River.</p>
+                <p>The municipal government of Unisan honored and recognized the two Cabezas as the founders of the now called "Municipality of Agdangan".</p>
+                <p>When the National Railroad going to Bicol was constructed there was an increase in the rate of population growth. The molave trees were abundant and were used in the railroad's tracks. The construction of the railways provided employment to the settlers and business boomed in the community.</p>
+                <p>The cadastral survey of Unisan which was completed in 1926 included Agdangan as one of its barrios. The first two streets in Agdangan were named after its founder. The two cabezas donated land for schools, churches, plazas, and cemeteries.</p>
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Municipality of Agdangan</h3>
+                <p>Official local government information portal for public communication and service access.</p>
+            </div>
+            <div>
+                <h3>Sections</h3>
+                <p><a href="/">Home</a></p>
+                <p><a href="/about-us">About Us</a></p>
+                <p><a href="/dashboard">News &amp; Contact</a></p>
+            </div>
+            <div>
+                <h3>Reach the Office</h3>
+                <p>(042) 421 5551</p>
+                <p>mgoagdangan@gmail.com</p>
+                <p>Agdangan, Quezon, Philippines</p>
+            </div>
+        </div>
+        <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
+    </footer>
+
     <script src="/assets/js/app.js"></script>
 </body>
 </html>

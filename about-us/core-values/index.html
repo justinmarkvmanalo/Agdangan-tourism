@@ -7,13 +7,171 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    <main class="page-main">
-        <section class="page-hero">
-            <span class="eyebrow">About Us</span>
-            <h1>Core Values</h1>
-            <p></p>
+    <div class="utility-bar">
+        <div class="utility-bar__inner">
+            <form class="utility-search" data-search-form>
+                <input type="search" name="query" placeholder="Search core values" aria-label="Search core values">
+            </form>
+            <div class="utility-meta">
+                <span class="utility-meta__item"><span>(042) 421 5551</span></span>
+                <span class="utility-meta__item"><span>mgoagdangan@gmail.com</span></span>
+                <a class="utility-cta" href="/dashboard">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="/" aria-label="Municipality of Agdangan home">
+                <img class="brand__banner" src="/assets/images/branding/municipality-banner.webp" alt="Municipality of Agdangan banner">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" data-site-nav>
+                <a href="/">Home</a>
+                <div class="site-nav__dropdown is-active">
+                    <a class="is-active" href="/about-us">About Us</a>
+                    <div class="site-nav__menu">
+                        <a href="/about-us/mission-and-vision">Mission and Vision</a>
+                        <a href="/about-us/core-values">Core Values</a>
+                        <a href="/about-us/history">History</a>
+                        <a href="/about-us/municipal-profile">Municipal Profile</a>
+                        <a href="/about-us/past-mayors">Past Mayors</a>
+                        <a href="/about-us/past-vice-mayors">Past Vice-Mayors</a>
+                    </div>
+                </div>
+                <a href="/booking">Government</a>
+                <div class="site-nav__dropdown">
+                    <a href="/services/business-permit">Services</a>
+                    <div class="site-nav__menu">
+                        <a href="/services/accounting-services">Accounting Services</a>
+                        <a href="/services/business-permit">Business Licensing</a>
+                        <a href="/services/taxes">Treasury and Payments</a>
+                        <a href="/services/property-records">Property Services</a>
+                        <a href="/services/municipal-agriculturist">Agriculture Services</a>
+                        <a href="/services/health-services">Health Services</a>
+                        <a href="/services/tourism-services">Tourism Services</a>
+                        <a href="/services/youth-programs">Youth Development</a>
+                        <a href="/services/environmental-services">Environmental Services</a>
+                        <a href="/services/fire-emergency-services">Fire &amp; Emergency Services</a>
+                        <a href="/services/voter-services">Election Services</a>
+                        <a href="/services/legislative-governance">Legislative &amp; Governance</a>
+                        <a href="/services/additional-services">Additional Services</a>
+                    </div>
+                </div>
+                <a href="/dashboard">News &amp; Updates</a>
+                <a href="/dashboard">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main page-main--core-values">
+        <section class="core-values-hero">
+            <div class="core-values-hero__media">
+                <img src="/assets/images/highlights/luminous-cross-of-grace.webp" alt="Luminous Cross of Grace Sanctuary in Agdangan">
+            </div>
+            <div class="core-values-hero__content">
+                <span class="eyebrow">About Us</span>
+                <h1>Core values that shape public conduct, service culture, and municipal leadership.</h1>
+                <p>These values define how the Municipality of Agdangan approaches decisions, serves residents, and sustains trust across every office and community-facing function.</p>
+                <div class="core-values-hero__actions">
+                    <a class="button button--primary" href="#values-grid">View Values</a>
+                    <a class="button button--ghost" href="#values-practice">How They Apply</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="core-values-shell">
+                <div class="core-values-intro">
+                    <span class="eyebrow">Public Service Ethos</span>
+                    <h2>Standards that keep governance credible, disciplined, and community-focused.</h2>
+                    <p>The page follows your second reference by leaning into the image first, then moving into structured value cards with stronger text hierarchy underneath.</p>
+                </div>
+
+                <div class="core-values-grid" id="values-grid">
+                    <article class="value-card">
+                        <span class="value-card__index">01</span>
+                        <h3>Integrity</h3>
+                        <p>Act honestly, uphold commitments, and protect public trust in every transaction, recommendation, and decision.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="value-card__index">02</span>
+                        <h3>Accountability</h3>
+                        <p>Own responsibilities clearly, report actions transparently, and remain answerable to the people the municipality serves.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="value-card__index">03</span>
+                        <h3>Responsiveness</h3>
+                        <p>Deliver timely, practical, and respectful service that addresses real community needs without unnecessary delay.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="value-card__index">04</span>
+                        <h3>Discipline</h3>
+                        <p>Maintain order, consistency, and professionalism in daily operations, public conduct, and program implementation.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="value-card__index">05</span>
+                        <h3>Inclusiveness</h3>
+                        <p>Ensure services, participation, and opportunities remain accessible across barangays, sectors, and generations.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="value-card__index">06</span>
+                        <h3>Stewardship</h3>
+                        <p>Manage public resources with care and long-term responsibility for the benefit of the entire municipality.</p>
+                    </article>
+                </div>
+
+                <section class="values-practice" id="values-practice">
+                    <div class="values-practice__copy">
+                        <span class="eyebrow">Daily Application</span>
+                        <h2>Core values are only useful when they are visible in actual service delivery.</h2>
+                        <p>Agdangan's values should be reflected in frontline conduct, internal coordination, communication with residents, and the way projects are planned and evaluated.</p>
+                    </div>
+                    <div class="values-practice__list">
+                        <article class="practice-item">
+                            <strong>Frontline Service</strong>
+                            <span>Respectful assistance, clear processes, and dependable response times.</span>
+                        </article>
+                        <article class="practice-item">
+                            <strong>Local Governance</strong>
+                            <span>Open reporting, lawful procedures, and consistent public accountability.</span>
+                        </article>
+                        <article class="practice-item">
+                            <strong>Community Programs</strong>
+                            <span>Inclusive implementation that balances order, empathy, and measurable outcomes.</span>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Municipality of Agdangan</h3>
+                <p>Official local government information portal for public communication and service access.</p>
+            </div>
+            <div>
+                <h3>Sections</h3>
+                <p><a href="/">Home</a></p>
+                <p><a href="/about-us">About Us</a></p>
+                <p><a href="/dashboard">News &amp; Contact</a></p>
+            </div>
+            <div>
+                <h3>Reach the Office</h3>
+                <p>(042) 421 5551</p>
+                <p>mgoagdangan@gmail.com</p>
+                <p>Agdangan, Quezon, Philippines</p>
+            </div>
+        </div>
+        <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
+    </footer>
+
     <script src="/assets/js/app.js"></script>
 </body>
 </html>

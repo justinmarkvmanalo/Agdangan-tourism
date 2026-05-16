@@ -7,13 +7,162 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    <main class="page-main">
-        <section class="page-hero">
-            <span class="eyebrow">About Us</span>
-            <h1>Mission and Vision</h1>
-            <p></p>
+    <div class="utility-bar">
+        <div class="utility-bar__inner">
+            <form class="utility-search" data-search-form>
+                <input type="search" name="query" placeholder="Search mission and vision" aria-label="Search mission and vision">
+            </form>
+            <div class="utility-meta">
+                <span class="utility-meta__item"><span>(042) 421 5551</span></span>
+                <span class="utility-meta__item"><span>mgoagdangan@gmail.com</span></span>
+                <a class="utility-cta" href="/dashboard">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="/" aria-label="Municipality of Agdangan home">
+                <img class="brand__banner" src="/assets/images/branding/municipality-banner.webp" alt="Municipality of Agdangan banner">
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" data-site-nav>
+                <a href="/">Home</a>
+                <div class="site-nav__dropdown is-active">
+                    <a class="is-active" href="/about-us">About Us</a>
+                    <div class="site-nav__menu">
+                        <a href="/about-us/mission-and-vision">Mission and Vision</a>
+                        <a href="/about-us/core-values">Core Values</a>
+                        <a href="/about-us/history">History</a>
+                        <a href="/about-us/municipal-profile">Municipal Profile</a>
+                        <a href="/about-us/past-mayors">Past Mayors</a>
+                        <a href="/about-us/past-vice-mayors">Past Vice-Mayors</a>
+                    </div>
+                </div>
+                <a href="/booking">Government</a>
+                <div class="site-nav__dropdown">
+                    <a href="/services/business-permit">Services</a>
+                    <div class="site-nav__menu">
+                        <a href="/services/accounting-services">Accounting Services</a>
+                        <a href="/services/business-permit">Business Licensing</a>
+                        <a href="/services/taxes">Treasury and Payments</a>
+                        <a href="/services/property-records">Property Services</a>
+                        <a href="/services/municipal-agriculturist">Agriculture Services</a>
+                        <a href="/services/health-services">Health Services</a>
+                        <a href="/services/tourism-services">Tourism Services</a>
+                        <a href="/services/youth-programs">Youth Development</a>
+                        <a href="/services/environmental-services">Environmental Services</a>
+                        <a href="/services/fire-emergency-services">Fire &amp; Emergency Services</a>
+                        <a href="/services/voter-services">Election Services</a>
+                        <a href="/services/legislative-governance">Legislative &amp; Governance</a>
+                        <a href="/services/additional-services">Additional Services</a>
+                    </div>
+                </div>
+                <a href="/dashboard">News &amp; Updates</a>
+                <a href="/dashboard">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main page-main--mission-vision">
+        <section class="mission-vision-hero">
+            <div class="mission-vision-hero__media">
+                <img src="/assets/images/hero/agdangan-aerial-view.webp" alt="Aerial view of the municipality center in Agdangan">
+            </div>
+            <div class="mission-vision-hero__content">
+                <span class="eyebrow">About Us</span>
+                <h1>Mission and vision grounded in service, order, and local progress.</h1>
+                <p>The Municipality of Agdangan aligns public service delivery with practical governance, community care, and long-term development for every barangay.</p>
+                <div class="mission-vision-hero__actions">
+                    <a class="button button--primary" href="#mission-card">Read Mission</a>
+                    <a class="button button--ghost" href="#vision-card">Read Vision</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="mission-vision-shell">
+                <div class="mission-vision-intro">
+                    <span class="eyebrow">Guiding Direction</span>
+                    <h2>Clear statements for how the municipality serves today and what it is building toward.</h2>
+                    <p>The design follows the image-led reference with a stronger visual header, large typography, and cleaner content framing underneath.</p>
+                </div>
+
+                <div class="mission-vision-grid">
+                    <article class="mission-card" id="mission-card">
+                        <span class="mission-card__label">Mission</span>
+                        <h3>Deliver responsive public service with integrity and discipline.</h3>
+                        <p>Provide accessible, efficient, and people-centered programs that strengthen local administration, improve daily life, and protect the welfare of Agdangan residents.</p>
+                        <ul class="mission-card__list">
+                            <li>Responsive frontline and community-based services</li>
+                            <li>Transparent and accountable local governance</li>
+                            <li>Inclusive support for social, economic, and civic growth</li>
+                        </ul>
+                    </article>
+
+                    <article class="mission-card mission-card--vision" id="vision-card">
+                        <span class="mission-card__label">Vision</span>
+                        <h3>A progressive coastal municipality with organized services and a resilient community.</h3>
+                        <p>Build an Agdangan that is safe, well-managed, economically active, and prepared for the future while preserving its local identity and public trust.</p>
+                        <ul class="mission-card__list">
+                            <li>Stronger public institutions and civic confidence</li>
+                            <li>Balanced growth across communities and sectors</li>
+                            <li>Long-term development anchored in good governance</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <section class="mission-focus">
+                    <div class="mission-focus__copy">
+                        <span class="eyebrow">Service Priorities</span>
+                        <h2>Public leadership that stays visible, measurable, and close to the community.</h2>
+                        <p>From administrative services to social programs and local development, these statements frame how the municipality communicates priorities and evaluates progress.</p>
+                    </div>
+                    <div class="mission-focus__stats">
+                        <article class="focus-pill">
+                            <strong>People First</strong>
+                            <span>Accessible services shaped around citizen needs.</span>
+                        </article>
+                        <article class="focus-pill">
+                            <strong>Good Governance</strong>
+                            <span>Transparent decisions and accountable implementation.</span>
+                        </article>
+                        <article class="focus-pill">
+                            <strong>Sustainable Growth</strong>
+                            <span>Development that supports long-term community stability.</span>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <div>
+                <h3>Municipality of Agdangan</h3>
+                <p>Official local government information portal for public communication and service access.</p>
+            </div>
+            <div>
+                <h3>Sections</h3>
+                <p><a href="/">Home</a></p>
+                <p><a href="/about-us">About Us</a></p>
+                <p><a href="/dashboard">News &amp; Contact</a></p>
+            </div>
+            <div>
+                <h3>Reach the Office</h3>
+                <p>(042) 421 5551</p>
+                <p>mgoagdangan@gmail.com</p>
+                <p>Agdangan, Quezon, Philippines</p>
+            </div>
+        </div>
+        <p class="site-footer__bottom">&copy; <span data-current-year></span> Municipality of Agdangan. All rights reserved.</p>
+    </footer>
+
     <script src="/assets/js/app.js"></script>
 </body>
 </html>
