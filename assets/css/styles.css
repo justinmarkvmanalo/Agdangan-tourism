@@ -1496,6 +1496,248 @@ a {
     background: #4679e8;
 }
 
+.leave-template {
+    margin-top: 8px;
+}
+
+.leave-template__paper {
+    background: #fffef9;
+    border: 2px solid rgba(24, 34, 52, 0.88);
+    box-shadow: 0 20px 42px rgba(24, 34, 52, 0.12);
+    color: #111;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.leave-template__masthead,
+.leave-template__section,
+.leave-template__bar,
+.leave-template__split,
+.leave-template__footer {
+    border-bottom: 1.5px solid rgba(24, 34, 52, 0.88);
+}
+
+.leave-template__masthead {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 18px;
+    padding: 18px 18px 12px;
+    align-items: start;
+}
+
+.leave-template__meta,
+.leave-template__heading,
+.leave-template__stamp {
+    font-size: 0.88rem;
+}
+
+.leave-template__meta p,
+.leave-template__heading p,
+.leave-template__heading h2,
+.leave-template__stamp span {
+    margin: 0;
+}
+
+.leave-template__heading {
+    text-align: center;
+}
+
+.leave-template__heading h2 {
+    margin-top: 12px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.03em;
+}
+
+.leave-template__stamp {
+    min-height: 76px;
+    border: 1.5px dashed rgba(24, 34, 52, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.leave-template__section {
+    padding: 0;
+}
+
+.leave-template__grid {
+    display: grid;
+}
+
+.leave-template__grid--three {
+    grid-template-columns: 1.1fr 1.9fr;
+}
+
+.leave-template__grid--four {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.leave-template__grid .leave-field {
+    border-right: 1.5px solid rgba(24, 34, 52, 0.88);
+}
+
+.leave-template__grid .leave-field:last-child {
+    border-right: 0;
+}
+
+.leave-template__grid + .leave-template__grid {
+    border-top: 1.5px solid rgba(24, 34, 52, 0.88);
+}
+
+.leave-template__bar {
+    padding: 6px 12px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.94rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: 0.04em;
+    background: rgba(24, 34, 52, 0.04);
+}
+
+.leave-template__split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.leave-template__split--short {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+.leave-template__panel {
+    padding: 10px 12px 14px;
+}
+
+.leave-template__panel + .leave-template__panel {
+    border-left: 1.5px solid rgba(24, 34, 52, 0.88);
+}
+
+.leave-template__panel h3 {
+    margin: 0 0 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #111;
+}
+
+.leave-template__stack {
+    display: grid;
+    gap: 8px;
+}
+
+.leave-field {
+    display: grid;
+    gap: 6px;
+    padding: 10px 12px;
+}
+
+.leave-field span {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.leave-field input,
+.leave-field textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1.5px solid rgba(24, 34, 52, 0.88);
+    border-radius: 0;
+    padding: 6px 0;
+    font: inherit;
+    color: #111;
+    background: transparent;
+    outline: none;
+}
+
+.leave-field textarea {
+    resize: vertical;
+    min-height: 84px;
+    border: 1.5px solid rgba(24, 34, 52, 0.88);
+    padding: 8px;
+}
+
+.leave-options {
+    display: grid;
+    gap: 8px;
+}
+
+.leave-options label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: #111;
+}
+
+.leave-options input[type="checkbox"],
+.leave-options input[type="radio"] {
+    margin-top: 3px;
+    accent-color: #0f2740;
+}
+
+.leave-options--compact {
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.leave-credits {
+    border: 1.5px solid rgba(24, 34, 52, 0.88);
+    margin: 12px 0;
+}
+
+.leave-credits__row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.leave-credits__row + .leave-credits__row {
+    border-top: 1.5px solid rgba(24, 34, 52, 0.88);
+}
+
+.leave-credits__row span,
+.leave-credits__row input {
+    min-width: 0;
+    padding: 8px 10px;
+    border-right: 1.5px solid rgba(24, 34, 52, 0.88);
+    font-size: 0.82rem;
+}
+
+.leave-credits__row span:last-child,
+.leave-credits__row input:last-child {
+    border-right: 0;
+}
+
+.leave-credits__row--head {
+    background: rgba(24, 34, 52, 0.04);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+}
+
+.leave-credits__row input {
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #111;
+}
+
+.leave-template__footer {
+    padding: 16px 18px 18px;
+    border-bottom: 0;
+}
+
+.leave-field--signature {
+    max-width: 380px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .permit-detail__panel h4 {
     margin: 16px 0 8px;
     font-size: 0.92rem;
@@ -2419,6 +2661,9 @@ a {
 
     .office-about,
     .permit-layout,
+    .leave-template__masthead,
+    .leave-template__split,
+    .leave-template__split--short,
     .history-feature,
     .contact-facts__top,
     .contact-facts__stats,
@@ -2441,6 +2686,31 @@ a {
 
     .permit-detail {
         padding-left: 0;
+    }
+
+    .leave-template__grid--three,
+    .leave-template__grid--four,
+    .leave-credits__row {
+        grid-template-columns: 1fr;
+    }
+
+    .leave-template__grid .leave-field,
+    .leave-template__panel + .leave-template__panel,
+    .leave-credits__row span,
+    .leave-credits__row input {
+        border-right: 0;
+    }
+
+    .leave-template__panel + .leave-template__panel {
+        border-left: 0;
+        border-top: 1.5px solid rgba(24, 34, 52, 0.88);
+    }
+
+    .leave-template__grid .leave-field + .leave-field,
+    .leave-credits__row span + span,
+    .leave-credits__row span + input,
+    .leave-credits__row input + input {
+        border-top: 1.5px solid rgba(24, 34, 52, 0.88);
     }
 
     .contact-facts__details {
@@ -2808,6 +3078,21 @@ a {
 
     .update-card img {
         height: 180px;
+    }
+
+    .leave-template__paper {
+        font-size: 0.94rem;
+    }
+
+    .leave-template__masthead,
+    .leave-template__panel,
+    .leave-template__footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .leave-template__heading h2 {
+        font-size: 1.45rem;
     }
 
     .history-feature {

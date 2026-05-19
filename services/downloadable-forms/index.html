@@ -113,6 +113,222 @@
                     <section class="office-panel is-active" role="tabpanel" data-tab-panel="services">
                         <div class="downloadables-list">
                             <details class="downloadables-item" open>
+                                <summary>FILLABLE APPLICATION FOR LEAVE TEMPLATE</summary>
+                                <div class="downloadables-item__body">
+                                    <form class="leave-template" aria-label="Fillable application for leave template">
+                                        <div class="leave-template__paper">
+                                            <div class="leave-template__masthead">
+                                                <div class="leave-template__meta">
+                                                    <p><strong>Civil Service Form No. 6</strong></p>
+                                                    <p>Revised 2020</p>
+                                                    <p><strong>Annex A-2</strong></p>
+                                                </div>
+                                                <div class="leave-template__heading">
+                                                    <p>Republic of the Philippines</p>
+                                                    <p>Municipality of Agdangan</p>
+                                                    <p>Human Resource Management Office</p>
+                                                    <h2>APPLICATION FOR LEAVE</h2>
+                                                </div>
+                                                <div class="leave-template__stamp">
+                                                    <span>Stamp of Date of Receipt</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="leave-template__section">
+                                                <div class="leave-template__grid leave-template__grid--three">
+                                                    <label class="leave-field">
+                                                        <span>1. Office / Department</span>
+                                                        <input type="text" name="office_department">
+                                                    </label>
+                                                    <label class="leave-field leave-field--wide">
+                                                        <span>2. Name</span>
+                                                        <input type="text" name="employee_name" placeholder="Last, First, Middle">
+                                                    </label>
+                                                </div>
+                                                <div class="leave-template__grid leave-template__grid--four">
+                                                    <label class="leave-field">
+                                                        <span>3. Date of Filing</span>
+                                                        <input type="date" name="date_filing">
+                                                    </label>
+                                                    <label class="leave-field">
+                                                        <span>4. Position</span>
+                                                        <input type="text" name="position">
+                                                    </label>
+                                                    <label class="leave-field">
+                                                        <span>5. Salary</span>
+                                                        <input type="text" name="salary">
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="leave-template__bar">6. DETAILS OF APPLICATION</div>
+
+                                            <div class="leave-template__split">
+                                                <section class="leave-template__panel">
+                                                    <h3>6.A Type of Leave to Be Availed Of</h3>
+                                                    <div class="leave-options">
+                                                        <label><input type="checkbox" name="leave_type" value="vacation"> Vacation Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="mandatory"> Mandatory / Forced Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="sick"> Sick Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="maternity"> Maternity Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="paternity"> Paternity Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="special"> Special Privilege Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="solo-parent"> Solo Parent Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="study"> Study Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="vawc"> 10-Day VAWC Leave</label>
+                                                        <label><input type="checkbox" name="leave_type" value="rehabilitation"> Rehabilitation Privilege</label>
+                                                        <label><input type="checkbox" name="leave_type" value="women"> Special Leave Benefits for Women</label>
+                                                        <label><input type="checkbox" name="leave_type" value="calamity"> Calamity Leave</label>
+                                                        <label class="leave-field">
+                                                            <span>Others</span>
+                                                            <input type="text" name="other_leave_type">
+                                                        </label>
+                                                    </div>
+                                                </section>
+
+                                                <section class="leave-template__panel">
+                                                    <h3>6.B Details of Leave</h3>
+                                                    <div class="leave-template__stack">
+                                                        <label class="leave-field">
+                                                            <span>In case of Vacation / Special Privilege Leave</span>
+                                                            <input type="text" name="vacation_detail" placeholder="Within the Philippines / Abroad">
+                                                        </label>
+                                                        <label class="leave-field">
+                                                            <span>In case of Sick Leave</span>
+                                                            <input type="text" name="sick_detail" placeholder="In hospital / Outpatient">
+                                                        </label>
+                                                        <label class="leave-field">
+                                                            <span>In case of Special Leave Benefits for Women</span>
+                                                            <input type="text" name="women_detail">
+                                                        </label>
+                                                        <label class="leave-field">
+                                                            <span>In case of Study Leave / Other Purpose</span>
+                                                            <input type="text" name="study_detail" placeholder="Completion of degree / Bar review / Monetization / Terminal leave">
+                                                        </label>
+                                                    </div>
+                                                </section>
+                                            </div>
+
+                                            <div class="leave-template__split leave-template__split--short">
+                                                <section class="leave-template__panel">
+                                                    <h3>6.C Number of Working Days Applied For</h3>
+                                                    <label class="leave-field">
+                                                        <span>Working Days</span>
+                                                        <input type="number" name="working_days" min="0">
+                                                    </label>
+                                                    <label class="leave-field">
+                                                        <span>Inclusive Dates</span>
+                                                        <input type="text" name="inclusive_dates">
+                                                    </label>
+                                                </section>
+
+                                                <section class="leave-template__panel">
+                                                    <h3>6.D Commutation</h3>
+                                                    <div class="leave-options leave-options--compact">
+                                                        <label><input type="radio" name="commutation" value="not-requested"> Not Requested</label>
+                                                        <label><input type="radio" name="commutation" value="requested"> Requested</label>
+                                                    </div>
+                                                    <label class="leave-field">
+                                                        <span>Signature of Applicant</span>
+                                                        <input type="text" name="applicant_signature">
+                                                    </label>
+                                                </section>
+                                            </div>
+
+                                            <div class="leave-template__bar">7. DETAILS OF ACTION ON APPLICATION</div>
+
+                                            <div class="leave-template__split">
+                                                <section class="leave-template__panel">
+                                                    <h3>7.A Certification of Leave Credits</h3>
+                                                    <label class="leave-field">
+                                                        <span>As Of</span>
+                                                        <input type="date" name="credits_as_of">
+                                                    </label>
+                                                    <div class="leave-credits">
+                                                        <div class="leave-credits__row leave-credits__row--head">
+                                                            <span></span>
+                                                            <span>Vacation Leave</span>
+                                                            <span>Sick Leave</span>
+                                                        </div>
+                                                        <div class="leave-credits__row">
+                                                            <span>Total Earned</span>
+                                                            <input type="text" name="vacation_total">
+                                                            <input type="text" name="sick_total">
+                                                        </div>
+                                                        <div class="leave-credits__row">
+                                                            <span>Less This Application</span>
+                                                            <input type="text" name="vacation_less">
+                                                            <input type="text" name="sick_less">
+                                                        </div>
+                                                        <div class="leave-credits__row">
+                                                            <span>Balance</span>
+                                                            <input type="text" name="vacation_balance">
+                                                            <input type="text" name="sick_balance">
+                                                        </div>
+                                                    </div>
+                                                    <label class="leave-field">
+                                                        <span>Authorized Officer</span>
+                                                        <input type="text" name="authorized_officer">
+                                                    </label>
+                                                </section>
+
+                                                <section class="leave-template__panel">
+                                                    <h3>7.B Recommendation</h3>
+                                                    <div class="leave-options leave-options--compact">
+                                                        <label><input type="radio" name="recommendation" value="approval"> For approval</label>
+                                                        <label><input type="radio" name="recommendation" value="disapproval"> For disapproval due to</label>
+                                                    </div>
+                                                    <label class="leave-field">
+                                                        <span>Recommendation Details</span>
+                                                        <textarea name="recommendation_details" rows="5"></textarea>
+                                                    </label>
+                                                    <label class="leave-field">
+                                                        <span>Immediate Head</span>
+                                                        <input type="text" name="immediate_head">
+                                                    </label>
+                                                </section>
+                                            </div>
+
+                                            <div class="leave-template__split leave-template__split--short">
+                                                <section class="leave-template__panel">
+                                                    <h3>7.C Approved For</h3>
+                                                    <div class="leave-template__stack">
+                                                        <label class="leave-field">
+                                                            <span>Days With Pay</span>
+                                                            <input type="text" name="days_with_pay">
+                                                        </label>
+                                                        <label class="leave-field">
+                                                            <span>Days Without Pay</span>
+                                                            <input type="text" name="days_without_pay">
+                                                        </label>
+                                                        <label class="leave-field">
+                                                            <span>Others</span>
+                                                            <input type="text" name="approved_others">
+                                                        </label>
+                                                    </div>
+                                                </section>
+
+                                                <section class="leave-template__panel">
+                                                    <h3>7.D Disapproved Due To</h3>
+                                                    <label class="leave-field">
+                                                        <span>Reason</span>
+                                                        <textarea name="disapproved_reason" rows="5"></textarea>
+                                                    </label>
+                                                </section>
+                                            </div>
+
+                                            <div class="leave-template__footer">
+                                                <label class="leave-field leave-field--signature">
+                                                    <span>Authorized Official</span>
+                                                    <input type="text" name="authorized_official">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </details>
+
+                            <details class="downloadables-item" open>
                                 <summary>OFFICE OF THE MUNICIPAL AGRICULTURIST</summary>
                                 <div class="downloadables-item__body">
                                     <div class="download-file-list">
