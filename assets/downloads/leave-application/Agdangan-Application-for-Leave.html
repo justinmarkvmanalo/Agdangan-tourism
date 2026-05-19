@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application for Leave</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+            color: #111;
+            background: #fff;
+        }
+
+        .sheet {
+            width: 190mm;
+            margin: 0 auto;
+            border: 1.5px solid #111;
+        }
+
+        .masthead,
+        .section,
+        .bar,
+        .split,
+        .footer {
+            border-bottom: 1.5px solid #111;
+        }
+
+        .masthead {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 12px;
+            padding: 10px 12px 8px;
+            align-items: start;
+        }
+
+        .meta,
+        .heading,
+        .stamp {
+            font-size: 11px;
+        }
+
+        .meta p,
+        .heading p,
+        .heading h1,
+        .stamp span {
+            margin: 0;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .heading h1 {
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            letter-spacing: 0.03em;
+        }
+
+        .stamp {
+            min-height: 58px;
+            border: 1px dashed #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6px;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .grid--two {
+            grid-template-columns: 1.1fr 1.9fr;
+        }
+
+        .grid--three {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .grid .field {
+            border-right: 1.5px solid #111;
+        }
+
+        .grid .field:last-child {
+            border-right: 0;
+        }
+
+        .grid + .grid {
+            border-top: 1.5px solid #111;
+        }
+
+        .bar {
+            padding: 5px 10px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            background: #f2f2f2;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .split--short {
+            grid-template-columns: 1.1fr 0.9fr;
+        }
+
+        .panel {
+            padding: 8px 10px 10px;
+        }
+
+        .panel + .panel {
+            border-left: 1.5px solid #111;
+        }
+
+        .panel h2 {
+            margin: 0 0 8px;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .field {
+            display: grid;
+            gap: 4px;
+            padding: 8px 10px;
+        }
+
+        .field span {
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .line {
+            min-height: 18px;
+            border-bottom: 1px solid #111;
+        }
+
+        .textarea {
+            min-height: 70px;
+            border: 1px solid #111;
+        }
+
+        .options {
+            display: grid;
+            gap: 5px;
+            font-size: 10px;
+            line-height: 1.35;
+        }
+
+        .option {
+            display: flex;
+            gap: 6px;
+            align-items: flex-start;
+        }
+
+        .box {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #111;
+            flex: 0 0 auto;
+            margin-top: 1px;
+        }
+
+        .credits {
+            border: 1px solid #111;
+            margin: 8px 0;
+        }
+
+        .credits-row {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+        }
+
+        .credits-row + .credits-row {
+            border-top: 1px solid #111;
+        }
+
+        .credits-row div {
+            min-height: 22px;
+            border-right: 1px solid #111;
+            padding: 5px 6px;
+            font-size: 10px;
+        }
+
+        .credits-row div:last-child {
+            border-right: 0;
+        }
+
+        .credits-row--head {
+            background: #f2f2f2;
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+        }
+
+        .footer {
+            padding: 10px 12px 14px;
+            border-bottom: 0;
+        }
+
+        .signature {
+            max-width: 280px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sheet">
+        <div class="masthead">
+            <div class="meta">
+                <p><strong>Civil Service Form No. 6</strong></p>
+                <p>Revised 2020</p>
+                <p><strong>Annex A-2</strong></p>
+            </div>
+            <div class="heading">
+                <p>Republic of the Philippines</p>
+                <p>Municipality of Agdangan</p>
+                <p>Human Resource Management Office</p>
+                <h1>APPLICATION FOR LEAVE</h1>
+            </div>
+            <div class="stamp">
+                <span>Stamp of Date of Receipt</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="grid grid--two">
+                <div class="field">
+                    <span>1. Office / Department</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>2. Name</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="grid grid--three">
+                <div class="field">
+                    <span>3. Date of Filing</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>4. Position</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>5. Salary</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bar">6. DETAILS OF APPLICATION</div>
+
+        <div class="split">
+            <div class="panel">
+                <h2>6.A Type of Leave to Be Availed Of</h2>
+                <div class="options">
+                    <div class="option"><span class="box"></span><span>Vacation Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Mandatory / Forced Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Sick Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Maternity Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Paternity Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Special Privilege Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Solo Parent Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Study Leave</span></div>
+                    <div class="option"><span class="box"></span><span>10-Day VAWC Leave</span></div>
+                    <div class="option"><span class="box"></span><span>Rehabilitation Privilege</span></div>
+                    <div class="option"><span class="box"></span><span>Special Leave Benefits for Women</span></div>
+                    <div class="option"><span class="box"></span><span>Calamity Leave</span></div>
+                </div>
+                <div class="field">
+                    <span>Others</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>6.B Details of Leave</h2>
+                <div class="field">
+                    <span>In case of Vacation / Special Privilege Leave</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>In case of Sick Leave</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>In case of Special Leave Benefits for Women</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>In case of Study Leave / Other Purpose</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="split split--short">
+            <div class="panel">
+                <h2>6.C Number of Working Days Applied For</h2>
+                <div class="field">
+                    <span>Working Days</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>Inclusive Dates</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>6.D Commutation</h2>
+                <div class="options">
+                    <div class="option"><span class="box"></span><span>Not Requested</span></div>
+                    <div class="option"><span class="box"></span><span>Requested</span></div>
+                </div>
+                <div class="field">
+                    <span>Signature of Applicant</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bar">7. DETAILS OF ACTION ON APPLICATION</div>
+
+        <div class="split">
+            <div class="panel">
+                <h2>7.A Certification of Leave Credits</h2>
+                <div class="field">
+                    <span>As Of</span>
+                    <div class="line"></div>
+                </div>
+                <div class="credits">
+                    <div class="credits-row credits-row--head">
+                        <div></div>
+                        <div>Vacation Leave</div>
+                        <div>Sick Leave</div>
+                    </div>
+                    <div class="credits-row">
+                        <div>Total Earned</div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="credits-row">
+                        <div>Less This Application</div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="credits-row">
+                        <div>Balance</div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="field">
+                    <span>Authorized Officer</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>7.B Recommendation</h2>
+                <div class="options">
+                    <div class="option"><span class="box"></span><span>For approval</span></div>
+                    <div class="option"><span class="box"></span><span>For disapproval due to</span></div>
+                </div>
+                <div class="field">
+                    <span>Recommendation Details</span>
+                    <div class="textarea"></div>
+                </div>
+                <div class="field">
+                    <span>Immediate Head</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="split split--short">
+            <div class="panel">
+                <h2>7.C Approved For</h2>
+                <div class="field">
+                    <span>Days With Pay</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>Days Without Pay</span>
+                    <div class="line"></div>
+                </div>
+                <div class="field">
+                    <span>Others</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>7.D Disapproved Due To</h2>
+                <div class="field">
+                    <span>Reason</span>
+                    <div class="textarea"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="field signature">
+                <span>Authorized Official</span>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
